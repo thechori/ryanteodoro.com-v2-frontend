@@ -22,6 +22,10 @@ const items = [
 ];
 
 const Sidebar = () => {
+  const viewResume = () => {
+    window.open("/files/resume.pdf");
+  };
+
   return (
     <div className="p-4 w-full sm:w-[350px] md:w-[400px]">
       <div>
@@ -34,7 +38,7 @@ const Sidebar = () => {
         <h1 className="text-6xl bg-font mb-2 font-bold">ryan teodoro</h1>
         <h2>founder, senior software engineer</h2>
         <h3 className="text-gray-500">lover of technology, cars, and coffee</h3>
-        <Button title="view resume" className="my-2" />
+        <Button title="view resume" className="my-2" onClick={viewResume} />
         {/* <div className="shadow-xl text-red-500">have a job listing? upload it to get a custom resume</div> */}
       </div>
 
