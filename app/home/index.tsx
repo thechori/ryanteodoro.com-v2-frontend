@@ -2,10 +2,10 @@ import Sidebar from "~/components/sidebar";
 
 export function Home() {
   return (
-    <main className="flex flex-col sm:flex-row justify-center sm:pt-16 pb-4">
+    <main className="container mx-auto max-w-[1200px] px-4 flex flex-col sm:flex-row justify-center sm:pt-16 pb-4">
       <Sidebar />
 
-      <div className="w-[200px]">
+      <div className="flex-1 w-full">
         <section id="about" className="mb-20">
           <p>
             I’m a developer passionate about crafting accessible, pixel-perfect

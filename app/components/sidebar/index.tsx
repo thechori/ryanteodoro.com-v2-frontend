@@ -23,7 +23,7 @@ const items = [
 
 const Sidebar = () => {
   return (
-    <nav className="p-4 w-full sm:w-[400px]">
+    <div className="p-4 w-full sm:w-[350px] md:w-[400px]">
       <div>
         <img
           width="200px"
@@ -31,10 +31,10 @@ const Sidebar = () => {
           alt="headshot of ryan teodoro with blue background"
           className="w:[50px] rounded-full py-4"
         />
-        <h1 className="text-6xl bg-font mb-2">ryan teodoro</h1>
+        <h1 className="text-6xl bg-font mb-2 font-bold">ryan teodoro</h1>
         <h2>founder, senior software engineer</h2>
-        <h3>lover of technology, cars, and coffee</h3>
-        <Button title="view resume" />
+        <h3 className="text-gray-500">lover of technology, cars, and coffee</h3>
+        <Button title="view resume" className="my-2" />
         {/* <div className="shadow-xl text-red-500">have a job listing? upload it to get a custom resume</div> */}
       </div>
 
@@ -61,7 +61,7 @@ const Sidebar = () => {
       </ul>
 
       <ModeToggle />
-    </nav>
+    </div>
   );
 };
 
