@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail } from "lucide-react";
 //
 import ModeToggle from "../mode-toggle";
 import Button from "../button";
@@ -18,6 +18,11 @@ const items = [
     name: "instagram",
     url: "https://instagram.com/theryanteodoro",
     icon: <Instagram />
+  },
+  {
+    name: "email",
+    url: "mailto:ryan.h.teodoro@gmail.com",
+    icon: <Mail />
   }
 ];
 

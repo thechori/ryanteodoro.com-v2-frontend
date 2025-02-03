@@ -1,8 +1,8 @@
-import Sidebar from "~/components/sidebar";
+import Sidebar from "./components/sidebar";
 
-export function Home() {
+function App() {
   return (
-    <main className="container mx-auto max-w-[1200px] px-4 flex flex-col sm:flex-row justify-center sm:pt-16 pb-4">
+    <main className="bg-slate-100 dark:bg-slate-900 container mx-auto max-w-[1200px] px-4 flex flex-col sm:flex-row justify-center sm:pt-16 pb-4 dark:text-red-500">
       <Sidebar />
 
       <div className="flex-1 w-full pr-4">
@@ -57,3 +57,5 @@ export function Home() {
     </main>
   );
 }
+
+export default App;
