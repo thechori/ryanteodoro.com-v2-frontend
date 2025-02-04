@@ -1,3 +1,4 @@
+import Button from "./components/button";
 import Sidebar from "./components/sidebar";
 
 function App() {
@@ -42,7 +43,11 @@ function App() {
           <p>here ar esome experiences</p>
           <p>here ar esome experiences</p>
 
-          <button>see all experiences</button>
+          <Button
+            title="see all experiences"
+            className="my-2"
+            variant="outline"
+          />
         </section>
 
         <section id="projects" className="mb-20">
@@ -51,7 +56,7 @@ function App() {
           <p>projecst!!!</p>
           <p>projecst!!!</p>
 
-          <button>see all projects</button>
+          <Button title="see all projects" className="my-2" variant="outline" />
         </section>
       </div>
     </main>

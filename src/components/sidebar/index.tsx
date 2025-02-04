@@ -45,19 +45,37 @@ const Sidebar = () => {
         </h1>
         <h2>founder, senior software engineer</h2>
         <h3 className="text-gray-500">lover of technology, cars, and coffee</h3>
-        <Button title="view resume" className="my-2" onClick={viewResume} />
+        <Button title="view resume" className="my-4" onClick={viewResume} />
         {/* <div className="shadow-xl text-red-500">have a job listing? upload it to get a custom resume</div> */}
       </div>
 
       <ul className="py-4">
-        <li className="hover:opacity-50 transition-all">
-          <a href="#about">about</a>
+        <li>
+          <a
+            href="#about"
+            className="hover:opacity-50 transition-all uppercase"
+          >
+            <span>-</span>
+            <span>about</span>
+          </a>
         </li>
-        <li className="hover:opacity-50 transition-all">
-          <a href="#experience">experience</a>
+        <li>
+          <a
+            href="#experience"
+            className="hover:opacity-50 transition-all uppercase"
+          >
+            <span>-</span>
+            <span>experience</span>
+          </a>
         </li>
-        <li className="hover:opacity-50 transition-all">
-          <a href="#projects">projects</a>
+        <li>
+          <a
+            href="#projects"
+            className="hover:opacity-50 transition-all uppercase"
+          >
+            <span>-</span>
+            <span>projects</span>
+          </a>
         </li>
       </ul>
 
