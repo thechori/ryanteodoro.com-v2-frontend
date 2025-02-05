@@ -3,12 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    @apply bg-slate-100;
+  body {
+    @apply bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 text-lg;
+  }
+
+  h2 {
+    @apply text-slate-600 dark:text-slate-400;
   }
 
   a {
-    @apply text-blue-700 font-semibold hover:opacity-50 transition-all;
+    @apply text-blue-700 dark:text-orange-300 font-semibold hover:opacity-50 transition-all;
   }
 }
 

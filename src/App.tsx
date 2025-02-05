@@ -2,7 +2,7 @@ import Sidebar from "./components/sidebar";
 
 function App() {
   return (
-    <main className="bg-slate-100 dark:bg-slate-900 container mx-auto max-w-[1200px] px-4 flex flex-col sm:flex-row justify-center sm:pt-16 pb-4 dark:text-red-500">
+    <main className="container mx-auto max-w-[1200px] px-4 flex flex-col sm:flex-row justify-center sm:pt-16 pb-4">
       <Sidebar />
 
       <div className="flex-1 w-full pr-4">
@@ -10,17 +10,25 @@ function App() {
           <h2 className="text-2xl font-bold">about</h2>
           <p className="mb-3">
             I'm a 3D animator turned software engineer/entrepreneur with a
-            passion for digital media. I grew up building computers and playing
-            video games and fell in love with the world of software when I was
-            forced to learn Java as part of my college curriculum. My favorite
-            work is found at the intersection of cutting-edge technology,
-            practical decisions, and positive tangible outcomes to my end users.
+            passion for solving interesting problems and digital media
+            entertainment. I fell in love with the world of software when I was
+            forced to learn Java as part of my college curriculum{" "}
+            <span className="opacity-50 italic">
+              (at the time, all I wanted to do was 3D model gundams)
+            </span>
+            . My favorite work is now found at the intersection of cutting-edge
+            technology,{" "}
+            <a href="https://medium.com/workleap/pragmatic-software-development-59d12790e422">
+              pragmatic decisions
+            </a>
+            , and positive tangible outcomes to my end users.
           </p>
           <p>
-            Currently, I'm founder and CEO at 4ccessible where I specialize in
-            the application of AI in the context of digital accessibility. My
-            startup was accepted into the startup centers at Google and Amazon
-            in Tokyo and was recently announced as an Innovation Award finalist
+            Currently, I'm founder and CEO at{" "}
+            <a href="https://4ccessible.com">4ccessible</a> where I specialize
+            in the application of AI in the context of digital accessibility. My
+            startup was accepted into the Tokyo startup centers at Google and
+            Amazon and was recently announced as an Innovation Award finalist
             for SXSW 2025.
           </p>
           <p className="mb-3"></p>
@@ -32,7 +40,10 @@ function App() {
           </p>
           <p className="mb-3">
             In my spare time, you'll find me in coffee shops hacking on{" "}
-            <a href="">my side projects</a>, drifting my boosted Scion FRS at{" "}
+            <a href="">my side projects</a> and telling baristas about how I
+            created{" "}
+            <a href="https://nationalcortadoday.com">National Cortado Day</a>,
+            drifting my turbo Scion FRS at{" "}
             <a href="https://lonestardrift.com/" target="_blank">
               Lone Start Drift
             </a>{" "}
@@ -41,6 +52,14 @@ function App() {
               IAS Drift
             </a>
             , or playing tennis with friends.
+          </p>
+
+          <p className="mt-20 opacity-50">
+            This website was created by yours truly. If you'd like to see the
+            source code, you can check it out{" "}
+            <a href="https://github.com/thechori/ryanteodoro.com-v2-frontend">
+              here.
+            </a>
           </p>
         </section>
 

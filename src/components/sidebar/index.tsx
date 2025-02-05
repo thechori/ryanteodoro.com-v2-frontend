@@ -5,9 +5,9 @@ import Button from "../button";
 
 const items = [
   {
-    name: "github",
-    url: "https://github.com/thechori",
-    icon: <Github />
+    name: "email",
+    url: "mailto:ryan.h.teodoro@gmail.com",
+    icon: <Mail />
   },
   {
     name: "linkedin",
@@ -15,14 +15,14 @@ const items = [
     icon: <Linkedin />
   },
   {
+    name: "github",
+    url: "https://github.com/thechori",
+    icon: <Github />
+  },
+  {
     name: "instagram",
     url: "https://instagram.com/theryanteodoro",
     icon: <Instagram />
-  },
-  {
-    name: "email",
-    url: "mailto:ryan.h.teodoro@gmail.com",
-    icon: <Mail />
   }
 ];
 
@@ -43,12 +43,27 @@ const Sidebar = () => {
         <h1 className="text-5xl md:text-6xl bg-font mb-2 font-bold">
           ryan teodoro
         </h1>
-        <h2>founder, senior software engineer</h2>
-        <h3 className="text-gray-500">
+        <div className="text-xl">founder, senior software engineer</div>
+        <div className="text-slate-500 dark:text-slate-400">
           lover of cool tech, fast cars, and hot espresso
-        </h3>
-        <Button title="view resume" className="my-4" onClick={viewResume} />
+        </div>
         {/* <div className="shadow-xl text-red-500">have a job listing? upload it to get a custom resume</div> */}
+      </div>
+
+      <div className="flex flex-row gap-4">
+        <Button title="view resume" className="my-4" onClick={viewResume} />
+        <ul className="flex gap-5 py-4">
+          {items.map((i, index) => (
+            <li
+              key={index}
+              className="flex items-center hover:opacity-50 transition-all"
+            >
+              <a href={i.url} target="_blank">
+                {i.icon}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
 
       {/* <ul className="py-4">
@@ -71,16 +86,6 @@ const Sidebar = () => {
           </a>
         </li>
       </ul> */}
-
-      <ul className="flex gap-4 py-4">
-        {items.map((i, index) => (
-          <li key={index} className="hover:opacity-50 transition-all">
-            <a href={i.url} target="_blank">
-              {i.icon}
-            </a>
-          </li>
-        ))}
-      </ul>
 
       <ModeToggle />
     </div>
