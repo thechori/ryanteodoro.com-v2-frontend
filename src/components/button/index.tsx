@@ -40,7 +40,7 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   // base styles that all buttons share
   const baseStyles =
-    "font-medium rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-offset-2 hover:opacity-75 hover:cursor-pointer transition-all";
+    "font-medium rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-offset-2 hover:opacity-50 hover:cursor-pointer transition-all";
 
   // disabled state
   const disabledStyles = "opacity-50 cursor-not-allowed";

@@ -1,4 +1,4 @@
-interface Experience {
+export interface Experience {
   company: string;
   location: string;
   roles: Role[];
@@ -10,7 +10,7 @@ interface Experience {
   projects: Project[];
 }
 
-interface Role {
+export interface Role {
   title: string;
   startDate: Date;
   endDate: Date | "Present";
@@ -18,7 +18,7 @@ interface Role {
   projectIds: string[]; // Reference to projects worked on in this role
 }
 
-interface Project {
+export interface Project {
   id: string;
   name: string;
   description: string;
@@ -39,20 +39,20 @@ interface Project {
   relatedProjects?: string[]; // IDs of related projects
 }
 
-interface ProjectMetric {
+export interface ProjectMetric {
   type: "Financial" | "Performance" | "Adoption" | "Ranking" | "Optimization";
   value: string;
   date?: Date;
 }
 
-interface Achievement {
+export interface Achievement {
   description: string;
   metrics?: ProjectMetric[];
   technologies: string[];
   projectType: ProjectType[];
 }
 
-interface TechnologyDetail {
+export interface TechnologyDetail {
   name: string;
   category: TechCategory;
   proficiencyLevel: 1 | 2 | 3 | 4 | 5; // 5 being expert
@@ -62,7 +62,7 @@ interface TechnologyDetail {
 }
 
 // Enums and Types
-type TechCategory =
+export type TechCategory =
   | "Frontend"
   | "Backend"
   | "Database"
@@ -74,7 +74,7 @@ type TechCategory =
   | "Framework"
   | "Language";
 
-type Industry =
+export type Industry =
   | "Consulting"
   | "Education"
   | "Enterprise"
@@ -96,7 +96,7 @@ type Industry =
   | "Energy"
   | "Chemicals";
 
-type ProjectType =
+export type ProjectType =
   | "Web app"
   | "Mobile app"
   | "Browser extension"
