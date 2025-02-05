@@ -36,7 +36,7 @@ const Sidebar = () => {
       <div>
         <img
           width="200px"
-          src="/images/headshot-1.png"
+          src="/images/headshot.png"
           alt="headshot of ryan teodoro with blue background"
           className="w:[50px] rounded-full py-4"
         />
@@ -44,35 +44,28 @@ const Sidebar = () => {
           ryan teodoro
         </h1>
         <h2>founder, senior software engineer</h2>
-        <h3 className="text-gray-500">lover of technology, cars, and coffee</h3>
+        <h3 className="text-gray-500">
+          lover of cool tech, fast cars, and hot espresso
+        </h3>
         <Button title="view resume" className="my-4" onClick={viewResume} />
         {/* <div className="shadow-xl text-red-500">have a job listing? upload it to get a custom resume</div> */}
       </div>
 
       <ul className="py-4">
         <li>
-          <a
-            href="#about"
-            className="hover:opacity-50 transition-all uppercase"
-          >
+          <a href="#about" className="hover:opacity-50 transition-all">
             <span>-</span>
             <span>about</span>
           </a>
         </li>
         <li>
-          <a
-            href="#experience"
-            className="hover:opacity-50 transition-all uppercase"
-          >
+          <a href="#experience" className="hover:opacity-50 transition-all">
             <span>-</span>
             <span>experience</span>
           </a>
         </li>
         <li>
-          <a
-            href="#projects"
-            className="hover:opacity-50 transition-all uppercase"
-          >
+          <a href="#projects" className="hover:opacity-50 transition-all">
             <span>-</span>
             <span>projects</span>
           </a>
