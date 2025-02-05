@@ -45,7 +45,7 @@ function App() {
           </p>
         </section>
 
-        <section id="experience" className="mb-20">
+        {/* <section id="experience" className="mb-20">
           <h2 className="text-2xl font-bold">experience</h2>
           <p>here ar esome experiences</p>
           <p>here ar esome experiences</p>
@@ -65,7 +65,7 @@ function App() {
           <p>projecst!!!</p>
 
           <Button title="see all projects" className="my-2" variant="outline" />
-        </section>
+        </section> */}
       </div>
     </main>
   );

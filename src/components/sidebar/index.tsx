@@ -51,7 +51,7 @@ const Sidebar = () => {
         {/* <div className="shadow-xl text-red-500">have a job listing? upload it to get a custom resume</div> */}
       </div>
 
-      <ul className="py-4">
+      {/* <ul className="py-4">
         <li>
           <a href="#about" className="hover:opacity-50 transition-all">
             <span>-</span>
@@ -70,7 +70,7 @@ const Sidebar = () => {
             <span>projects</span>
           </a>
         </li>
-      </ul>
+      </ul> */}
 
       <ul className="flex gap-4 py-4">
         {items.map((i, index) => (
