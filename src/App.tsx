@@ -10,18 +10,14 @@ function App() {
           <h2 className="text-2xl font-bold">about</h2>
           <p className="mb-3">
             I'm a 3D animator turned software engineer/entrepreneur with a
-            passion for solving interesting problems and digital media
-            entertainment. I fell in love with the world of software when I was
-            forced to learn Java as part of my college curriculum{" "}
-            <span className="opacity-50 italic">
-              (at the time, all I wanted to do was 3D model gundams)
-            </span>
-            . My favorite work is now found at the intersection of cutting-edge
+            passion for solving interesting problems and creating digital media.
+            My favorite work is found at the intersection of cutting-edge
             technology,{" "}
             <a href="https://medium.com/workleap/pragmatic-software-development-59d12790e422">
               pragmatic decisions
             </a>
-            , and positive tangible outcomes to my end users.
+            , and great user experiences that are highly intuitive - things only
+            achieved through teams without ego.
           </p>
           <p>
             Currently, I'm founder and CEO at{" "}
