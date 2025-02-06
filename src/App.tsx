@@ -30,8 +30,8 @@ function App() {
           <p className="mb-3">
             I've had the opportunity to develop software across nearly all
             industries — from big tech (HP) and large corporations (Shell) to
-            YC-backed startups (Perl Street [YC W22]), small digital product
-            studios, non-profits, and so much more.
+            YC-backed startups (Perl Street [YC W22]), digital agencies,
+            non-profits, and so much more.
           </p>
           <p className="mb-3">
             In my spare time, you'll find me in coffee shops hacking on{" "}
