@@ -16,8 +16,7 @@ function App() {
             <a href="https://medium.com/workleap/pragmatic-software-development-59d12790e422">
               pragmatic decisions
             </a>
-            , and great user experiences that are highly intuitive - things only
-            achieved through teams without ego.
+            , and great user experiences that are highly useful and intuitive.
           </p>
           <p>
             Currently, I'm founder and CEO at{" "}
