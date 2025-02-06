@@ -1,3 +1,4 @@
+import Button from "./components/button";
 import Sidebar from "./components/sidebar";
 
 function App() {
@@ -50,17 +51,9 @@ function App() {
             </a>
             , or playing tennis with friends.
           </p>
-
-          <p className="mt-20 text-slate-400">
-            This website was created by yours truly. If you'd like to see the
-            source code, you can check it out{" "}
-            <a href="https://github.com/thechori/ryanteodoro.com-v2-frontend">
-              here.
-            </a>
-          </p>
         </section>
 
-        {/* <section id="experience" className="mb-20">
+        <section id="experience" className="mb-20">
           <h2 className="text-2xl font-bold">experience</h2>
           <p>here ar esome experiences</p>
           <p>here ar esome experiences</p>
@@ -80,7 +73,17 @@ function App() {
           <p>projecst!!!</p>
 
           <Button title="see all projects" className="my-2" variant="outline" />
-        </section> */}
+        </section>
+
+        <section id="footer">
+          <p className="mt-20 text-slate-400">
+            This website was created by yours truly. If you'd like to see the
+            source code, you can check it out{" "}
+            <a href="https://github.com/thechori/ryanteodoro.com-v2-frontend">
+              here.
+            </a>
+          </p>
+        </section>
       </div>
     </main>
   );
