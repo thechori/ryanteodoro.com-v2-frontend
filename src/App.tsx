@@ -37,8 +37,10 @@ function App() {
             In my spare time, you'll find me in coffee shops hacking on{" "}
             <a href="">my side projects</a> and telling baristas about how I
             created{" "}
-            <a href="https://nationalcortadoday.com">National Cortado Day</a>,
-            drifting my turbo Scion FRS at{" "}
+            <a href="https://nationalcortadoday.com" target="_blank">
+              National Cortado Day
+            </a>
+            , drifting my turbo Scion FRS at{" "}
             <a href="https://lonestardrift.com/" target="_blank">
               Lone Start Drift
             </a>{" "}
