@@ -2,63 +2,48 @@ export interface Experience {
   company: string;
   location: string;
   roles: Role[];
-  technologies: TechnologyDetail[];
   industries: Industry[];
   startDate: Date;
-  endDate: Date | "Present";
+  endDate: Date | null;
   type: "Full time" | "Contract" | "Internship" | "Founder";
-  projects: Project[];
+  // projects: Project[];
 }
 
 export interface Role {
   title: string;
   startDate: Date;
-  endDate: Date | "Present";
-  achievements: Achievement[];
-  projectIds: string[]; // Reference to projects worked on in this role
+  endDate: Date | null;
+  achievements: string[];
+  projects: Project[];
+  description: string;
+}
+
+export interface Provider {
+  name: string;
+  services: string[];
 }
 
 export interface Project {
-  id: string;
   name: string;
   description: string;
-  startDate: Date;
-  endDate: Date | "Present";
-  type: ProjectType[];
-  technologies: string[];
-  teamSize?: number;
-  role: string;
-  achievements: Achievement[];
-  metrics?: ProjectMetric[];
-  links?: {
-    github?: string;
-    demo?: string;
-    production?: string;
-    documentation?: string;
-  };
-  relatedProjects?: string[]; // IDs of related projects
-}
+  url: string | null;
+  languages: string[];
+  databases: string[];
+  frameworks: string[];
+  libraries: string[];
+  providers: Provider[];
 
-export interface ProjectMetric {
-  type: "Financial" | "Performance" | "Adoption" | "Ranking" | "Optimization";
-  value: string;
-  date?: Date;
-}
-
-export interface Achievement {
-  description: string;
-  metrics?: ProjectMetric[];
-  technologies: string[];
-  projectType: ProjectType[];
-}
-
-export interface TechnologyDetail {
-  name: string;
-  category: TechCategory;
-  proficiencyLevel: 1 | 2 | 3 | 4 | 5; // 5 being expert
-  // removing YOE - these values should be calculated at the high level
-  // of the resume based on the project start date
-  // yearsOfExperience: number;
+  // type: ProjectType[];
+  // technologies: string[];
+  // role: string;
+  // achievements: Achievement[];
+  // metrics?: ProjectMetric[];
+  // links?: {
+  //   github?: string;
+  //   demo?: string;
+  //   production?: string;
+  //   documentation?: string;
+  // };
 }
 
 // Enums and Types

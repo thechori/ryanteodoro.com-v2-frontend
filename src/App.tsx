@@ -1,6 +1,9 @@
 import { ExternalLink } from "lucide-react";
+import { format } from "date-fns";
+//
 import Button from "./components/button";
 import Sidebar from "./components/sidebar";
+import { experiences } from "./data/new";
 
 function App() {
   return (
@@ -15,39 +18,45 @@ function App() {
             passion for solving interesting problems and creating digital media.
             My favorite work is found at the intersection of cutting-edge
             technology,{" "}
-            <a href="https://medium.com/workleap/pragmatic-software-development-59d12790e422">
+            <a
+              href="https://medium.com/workleap/pragmatic-software-development-59d12790e422"
+              target="_blank"
+            >
               pragmatic decisions
             </a>
             , and great user experiences that are highly useful and intuitive.
           </p>
           <p>
             Currently, I'm founder and CEO at{" "}
-            <a href="https://4ccessible.com">4ccessible</a> where I specialize
-            in the application of AI in the context of digital accessibility. My
-            startup was accepted into the Tokyo startup centers at Google and
-            Amazon and was recently announced as an Innovation Award finalist
-            for SXSW 2025. I also run{" "}
-            <a href="https://teodorosystems.com">
-              a small software consultancy.
-            </a>
+            <a href="https://4ccessible.com" target="_blank">
+              4ccessible
+            </a>{" "}
+            where I specialize in the application of AI in the context of
+            digital accessibility. My startup was accepted into the Tokyo
+            startup centers at Google and Amazon and was recently announced as
+            an Innovation Award finalist for SXSW 2025.
           </p>
           <p className="mb-3"></p>
           <p className="mb-3">
-            I've had the opportunity to develop software across nearly all
-            industries — from big tech (HP) and large corporations (Shell) to
+            I also run{" "}
+            <a href="https://teodorosystems.com" target="_blank">
+              a small software consultancy
+            </a>{" "}
+            where I've had the opportunity to develop software for many sorts of
+            clients such as big tech (HP) and large corporations (Shell) to
             YC-backed startups (Perl Street [YC W22]), digital agencies,
             non-profits, and so much more.
           </p>
           <p className="mb-3">
             In my spare time, you'll find me in coffee shops hacking on{" "}
-            <a href="">my side projects</a> and telling baristas about how I
-            created{" "}
+            <a href="#projects">my side projects</a> and telling baristas about
+            how I created{" "}
             <a href="https://nationalcortadoday.com" target="_blank">
               National Cortado Day
             </a>
             , drifting my turbo Scion FRS at{" "}
             <a href="https://lonestardrift.com/" target="_blank">
-              Lone Start Drift
+              Lone Star Drift
             </a>{" "}
             or{" "}
             <a href="https://iasdrift.com/" target="_blank">
@@ -61,123 +70,20 @@ function App() {
           <h2 className="text-2xl font-bold">experience</h2>
 
           {/* companies */}
-          {[
-            {
-              name: "4ccessible",
-              roles: [
-                {
-                  title: "Founder & CEO",
-                  description:
-                    "Lead and manage projects to make the internet accessible for the blind and visually impaired.",
-                  startDate: "April 2024",
-                  endDate: null,
-                  projects: [
-                    {
-                      title: "Browser Extension",
-                      description: "Leveraged gpt4o-mini to process guide ",
-                      languages: ["TypeScript"],
-                      frameworks: ["Express.js"],
-                      databases: ["Postgres"],
-                      libraries: ["React", "Redux Toolkit"],
-                      providers: [
-                        "DigitalOcean",
-                        "Supabase",
-                        "OpenAI",
-                        "Stripe"
-                      ]
-                    },
-                    {
-                      title: "Website Scanner",
-                      description:
-                        "Developed a tool for companies to run ADA compliance scans",
-                      languages: ["TypeScript"],
-                      frameworks: ["Express.js"],
-                      databases: ["Postgres"],
-                      libraries: [
-                        "React",
-                        "Redux Toolkit",
-                        "axe-core",
-                        "Cypress"
-                      ],
-                      providers: ["DigitalOcean", "Supabase"]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              name: "Teodoro Systems",
-              roles: [
-                {
-                  title: "Founder & CEO",
-                  description:
-                    "Lead and manage software consulting projects across many different industries.",
-                  startDate: "November 2017",
-                  endDate: null,
-                  projects: [
-                    {
-                      title: "Stream for the Blind",
-                      description:
-                        "Created a streaming platform centered around accessible for the blind community.",
-                      url: "https://streamfortheblind.com",
-                      languages: ["TypeScript"],
-                      databases: ["Postgres", "Redis"],
-                      frameworks: [],
-                      libraries: ["React", "ffmpeg"],
-                      providers: [
-                        "AWS",
-                        "Supabase",
-                        "DigitalOcean",
-                        "Twilio",
-                        "Stripe"
-                      ]
-                    },
-                    {
-                      title: "Live Stream Real-Time Language Translator",
-                      description:
-                        "Created Python app to process live stream data via URL, convert audio to text, translate text from English to Spanish, then run final transform to convert text to speech. Built using fully open-source Vosk models and ran locally on edge hardware. Also built a set of scripts to automate the retrieval of audio files from a website, transcribe them, then use a trained voice model to output summaries using AI to save staff time on mundane, reptitive tasks.",
-                      url: null,
-                      languages: ["Python"],
-                      databases: null,
-                      frameworks: [],
-                      libraries: ["vosk"],
-                      providers: ["OpenAI", "ElevenLabs"]
-                    },
-                    {
-                      title: "EchoDial",
-                      description:
-                        "Developed dialer and CRM platform to automate phone call outreach programs.",
-                      languages: ["TypeScript"],
-                      databases: ["Postgres"],
-                      frameworks: ["Express.js"],
-                      libraries: ["React", "Mantine UI"],
-                      providers: ["DigitalOcean", "Twilio", "Stripe"]
-                    },
-                    {
-                      title: "Perl Street (YC W22)",
-                      description: "Contributed to features",
-                      languages: ["TypeScript"],
-                      databases: [],
-                      frameworks: [],
-                      libraries: ["React", "Semantic UI"],
-                      providers: ["Google Cloud Platform"]
-                    }
-                  ]
-                }
-              ]
-            }
-          ].map((company) => (
+          {experiences.map((experience) => (
             <div className="border-2 my-4">
-              <div className="font-bold">{company.name}</div>
+              <div className="font-bold">{experience.company}</div>
 
-              {/* roles within company */}
-              {company.roles.map((role) => (
+              {/* roles within experience */}
+              {experience.roles.map((role) => (
                 <div>
                   <div className="flex justify-between">
                     <div>{role.title}</div>
                     <div>
-                      {role.startDate} -{" "}
-                      {role.endDate ? role.endDate : "Present"}
+                      {format(role.startDate, "MMMM yyyy")} -{" "}
+                      {role.endDate
+                        ? format(role.endDate, "MMMM yyyy")
+                        : "Present"}
                     </div>
                   </div>
                   <div>{role.description}</div>
@@ -186,7 +92,7 @@ function App() {
                   <div>
                     {role.projects.map((project) => (
                       <div className="pl-4 mb-2">
-                        <div className="font-semibold">{project.title}</div>
+                        <div className="font-semibold">{project.name}</div>
                         <div>{project.description}</div>
                         <div>
                           {project.languages.map((language) => (
@@ -221,6 +127,17 @@ function App() {
               date: "February 2025",
               skills: ["React", "TailwindCSS"],
               platforms: ["Netlify"]
+            },
+            {
+              title: "Live Stream Real-Time Language Translator",
+              description:
+                "Created Python app to process live stream data via URL, convert audio to text, translate text from English to Spanish, then run final transform to convert text to speech. Built using fully open-source Vosk models and ran locally on edge hardware. Also built a set of scripts to automate the retrieval of audio files from a website, transcribe them, then use a trained voice model to output summaries using AI to save staff time on mundane, reptitive tasks.",
+              url: null,
+              languages: ["Python"],
+              databases: null,
+              frameworks: [],
+              libraries: ["vosk"],
+              providers: ["OpenAI", "ElevenLabs"]
             },
             {
               title: "Fern (YC W23)",
@@ -267,9 +184,11 @@ function App() {
               <div className="flex justify-between">
                 <div className="flex">
                   <div className="font-semibold pr-1">{project.title}</div>
-                  <a href={project.url}>
-                    <ExternalLink />
-                  </a>
+                  {project.url && (
+                    <a href={project.url} target="_blank">
+                      <ExternalLink />
+                    </a>
+                  )}
                 </div>
 
                 <div>{project.date}</div>
@@ -277,7 +196,7 @@ function App() {
 
               <div>{project.description}</div>
               <div>
-                {project.skills.map((skill) => (
+                {project.skills?.map((skill) => (
                   <div className="text-white bg-teal-600 inline px-2 py-1 rounded-md text-sm mr-2">
                     {skill}
                   </div>
@@ -293,7 +212,10 @@ function App() {
           <p className="mt-20 text-slate-400">
             This website was created by yours truly. If you'd like to see the
             source code, you can check it out{" "}
-            <a href="https://github.com/thechori/ryanteodoro.com-v2-frontend">
+            <a
+              href="https://github.com/thechori/ryanteodoro.com-v2-frontend"
+              target="_blank"
+            >
               here.
             </a>
           </p>
