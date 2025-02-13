@@ -1,5 +1,6 @@
 export interface Experience {
   company: string;
+  url: string | null;
   location: string;
   roles: Role[];
   industries: Industry[];
@@ -43,6 +44,7 @@ export interface Project {
   frameworks: string[];
   libraries: string[];
   providers: Provider[];
+  accomplishments: string[];
 
   // type: ProjectType[];
   // technologies: string[];

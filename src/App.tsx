@@ -42,25 +42,23 @@ function App() {
             <a href="https://teodorosystems.com" target="_blank">
               a small software consultancy
             </a>{" "}
-            where I've had the opportunity to develop software for many sorts of
-            clients such as big tech (HP) and large corporations (Shell) to
-            YC-backed startups (Perl Street [YC W22]), digital agencies,
-            non-profits, and so much more.
+            where I've had the opportunity to develop software for Fortune 500
+            companies, YC-backed startups, digital agencies, non-profits, and so
+            much more.
           </p>
           <p className="mb-3">
             In my spare time, you'll find me in coffee shops hacking on{" "}
-            <a href="#projects">my side projects</a> and telling baristas about
-            how I created{" "}
+            <a href="#projects">my side projects</a> (and telling the poor
+            baristas about how I created{" "}
             <a href="https://nationalcortadoday.com" target="_blank">
               National Cortado Day
             </a>
-            , drifting my turbo Scion FRS at{" "}
-            <a href="https://lonestardrift.com/" target="_blank">
+            ), drifting my turbo Scion FRS at{" "}
+            <a
+              href="https://youtu.be/Hs3hqR3eJSM?si=u51u3YbsOoWn8nc_&t=23"
+              target="_blank"
+            >
               Lone Star Drift
-            </a>{" "}
-            or{" "}
-            <a href="https://iasdrift.com/" target="_blank">
-              IAS Drift
             </a>
             , or playing tennis with friends.
           </p>

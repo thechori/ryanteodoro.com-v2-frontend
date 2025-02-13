@@ -3,6 +3,7 @@ import { Experience } from "../types";
 export const experiences: Experience[] = [
   {
     company: "4ccessible",
+    url: "https://4ccessible.com",
     location: "Houston, TX",
     startDate: new Date(2024, 3),
     industries: ["Accessibility", "Technology"],
@@ -18,16 +19,17 @@ export const experiences: Experience[] = [
         endDate: null,
         achievements: [
           "SXSW Innovation Award Finalist (2025)",
-          "Google Tokyo Startup member",
+          "Google Tokyo Startups member",
           "AWS Tokyo Startup Loft member"
         ],
         projects: [
           {
             name: "Browser Extension",
             description:
-              "Flagship tool to enable navigation of the web using just your voice.",
+              "Flagship tool that enables navigation of the web using just your voice.",
             descriptionTechnical: "",
-            url: null,
+            url: "https://chromewebstore.google.com/detail/4ccessible/jfpppiodkeblpkbpilccpoalkhnpopei?pli=1",
+            accomplishments: [],
             elements: ["Web", "API"],
             languages: ["TypeScript"],
             frameworks: ["Express"],
@@ -63,7 +65,8 @@ export const experiences: Experience[] = [
             languages: ["TypeScript"],
             databases: ["Postgres", "Redis"],
             frameworks: [],
-            libraries: ["React", "ffmpeg"],
+            libraries: ["React", "", "ffmpeg"],
+            accomplishments: [],
             providers: [
               {
                 name: "AWS",
@@ -71,19 +74,11 @@ export const experiences: Experience[] = [
               },
               {
                 name: "Supabase",
-                services: ["Auth"]
+                services: ["Auth", "Database"]
               },
               {
                 name: "DigitalOcean",
-                services: []
-              },
-              {
-                name: "Twilio",
-                services: []
-              },
-              {
-                name: "Stripe",
-                services: []
+                services: ["App"]
               }
             ]
           },
@@ -92,7 +87,7 @@ export const experiences: Experience[] = [
             description:
               "Developed tool for running comprehensive accessibility scans against URLs.",
             descriptionTechnical:
-              "Next.js frontend was deployed to Vercel using their CI/CD pipeline and using branch merge triggers. The audit page allowed users to enter a URL and hit go to fire off an API call to the backend which was hosted onsite on an old MacBook Pro via ngrok's tunneling service. This design decision was chosen because the cloud services at proviers like DigitalOcean were extremely expensive for servers with powerful CPUs and GPUs which were necessary to run in-depth scans, especially in parallel when multiple scans were requested. This parallelism was made possible using clustering in the `puppeteer-cluster` NPM library.",
+              "Next.js frontend was deployed to Vercel using their CI/CD pipeline and using branch merge triggers. The audit page allowed users to submit a URL which would fire off an API call to the dedicated backend service (Node.js/Express) which was hosted onsite on an old MacBook Pro via ngrok's tunneling service. This design decision was chosen because the cloud services at providers like DigitalOcean were extremely expensive for servers with powerful CPUs and GPUs which were necessary to run in-depth scans, especially in parallel when multiple scans were requested. This parallelism was made possible using clustering in the `puppeteer-cluster` NPM library. All requests and results were stored to a Postgres DB hosted via Supabase and this information was used for lead generation purposes.",
             url: null,
             elements: ["Web", "API"],
             languages: ["TypeScript"],
@@ -106,13 +101,14 @@ export const experiences: Experience[] = [
               "ngrok"
             ],
             providers: [
-              { name: "DigitalOcean", services: ["App"] },
+              { name: "DigitalOcean", services: ["Database"] },
               { name: "Vercel", services: ["App Hosting"] },
               {
                 name: "Supabase",
                 services: ["Database"]
               }
-            ]
+            ],
+            accomplishments: []
           }
         ]
       }
@@ -120,6 +116,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Teodoro Systems",
+    url: "https://teodorosystems.com",
     location: "Houston, TX",
     industries: ["Consulting"],
     startDate: new Date(2017, 10),
@@ -133,7 +130,6 @@ export const experiences: Experience[] = [
         startDate: new Date(2017, 10),
         endDate: null,
         achievements: [],
-
         projects: [
           {
             name: "Fair Worlds",
@@ -152,19 +148,21 @@ export const experiences: Experience[] = [
                 name: "GCP",
                 services: ["Cloud Storage"]
               }
-            ]
+            ],
+            accomplishments: []
           },
           {
             name: "EchoDial",
             description:
               "Dialer with powerful CRM to effectively automate sales outreach efforts.",
-            descriptionTechnical: "",
+            descriptionTechnical:
+              "Home-baked authentication system which leveraged JWTs.",
             url: null,
             elements: ["Web", "API"],
             languages: ["TypeScript", "SQL"],
             databases: ["Postgres"],
             frameworks: ["Express"],
-            libraries: ["React", "Mantine UI"],
+            libraries: ["React", "Mantine UI", ""],
             providers: [
               {
                 name: "DigitalOcean",
@@ -178,7 +176,8 @@ export const experiences: Experience[] = [
                 name: "Stripe",
                 services: ["Billing"]
               }
-            ]
+            ],
+            accomplishments: []
           },
           {
             name: "Perl Street (YC W22)",
@@ -195,7 +194,8 @@ export const experiences: Experience[] = [
                 name: "Google Cloud Platform",
                 services: ["Cloud Functions", "Cloud Storage"]
               }
-            ]
+            ],
+            accomplishments: []
           }
         ]
       }
@@ -203,6 +203,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Shell",
+    url: "https://shell.com",
     location: "Houston, TX",
     industries: ["Energy"],
     startDate: new Date(2019, 0),
@@ -230,7 +231,8 @@ export const experiences: Experience[] = [
             databases: ["Postgres"],
             frameworks: ["Apollo", "Docker", "Kubernetes"],
             libraries: ["React"],
-            providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }]
+            providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }],
+            accomplishments: []
           }
         ]
       }
