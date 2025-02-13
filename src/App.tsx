@@ -12,7 +12,7 @@ function App() {
 
       <div className="flex-1 w-full pr-4">
         <section id="about" className="mb-20">
-          <h2 className="text-2xl font-bold">about</h2>
+          <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">about</h2>
           <p className="mb-3">
             I'm a 3D animator turned software engineer/entrepreneur with a
             passion for solving interesting problems and creating digital media.
@@ -67,24 +67,28 @@ function App() {
         </section>
 
         <section id="experience" className="mb-20">
-          <h2 className="text-2xl font-bold">experience</h2>
+          <h2 className="text-3xl font-bold mb-4 3b-1 border-b-2">
+            experience
+          </h2>
 
           {/* companies */}
           {experiences.map((experience) => (
-            <div className="border-2 my-4">
-              <div className="font-bold">{experience.company}</div>
+            <div className="mb-10">
+              <div className="font-bold text-xl">{experience.company}</div>
 
               {/* roles within experience */}
               {experience.roles.map((role) => (
                 <div>
                   <div className="flex justify-between">
                     <div>{role.title}</div>
-                    <div>
-                      {format(role.startDate, "MMMM yyyy")} -{" "}
-                      {role.endDate
-                        ? format(role.endDate, "MMMM yyyy")
-                        : "Present"}
-                    </div>
+                    {role.startDate && (
+                      <div>
+                        {format(role.startDate, "MMMM yyyy")} -{" "}
+                        {role.endDate
+                          ? format(role.endDate, "MMMM yyyy")
+                          : "Present"}
+                      </div>
+                    )}
                   </div>
                   <div>{role.description}</div>
 
@@ -117,7 +121,7 @@ function App() {
         </section>
 
         <section id="projects" className="mb-20">
-          <h2 className="text-2xl font-bold">projects</h2>
+          <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">projects</h2>
           {[
             {
               title: "Portfolio Website",

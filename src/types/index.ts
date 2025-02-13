@@ -11,7 +11,7 @@ export interface Experience {
 
 export interface Role {
   title: string;
-  startDate: Date;
+  startDate: Date | null;
   endDate: Date | null;
   achievements: string[];
   projects: Project[];
@@ -23,9 +23,20 @@ export interface Provider {
   services: string[];
 }
 
+export type Element =
+  | "Web"
+  | "Mobile"
+  | "API"
+  | "Bot"
+  | "Desktop"
+  | "Game"
+  | "Tool";
+
 export interface Project {
   name: string;
   description: string;
+  descriptionTechnical: string;
+  elements: Element[];
   url: string | null;
   languages: string[];
   databases: string[];
