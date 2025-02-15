@@ -35,6 +35,7 @@ export type Element =
 
 export interface Project {
   name: string;
+  role: string;
   description: string;
   descriptionTechnical: string;
   elements: Element[];

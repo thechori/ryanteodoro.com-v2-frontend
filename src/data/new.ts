@@ -25,6 +25,7 @@ export const experiences: Experience[] = [
         projects: [
           {
             name: "Browser Extension",
+            role: "Tech Lead",
             description:
               "Flagship tool that enables navigation of the web using just your voice.",
             descriptionTechnical: "",
@@ -57,6 +58,7 @@ export const experiences: Experience[] = [
           },
           {
             name: "Stream for the Blind",
+            role: "Tech Lead",
             description:
               "Streaming platform centered around accessible for the blind community.",
             descriptionTechnical: "",
@@ -84,6 +86,7 @@ export const experiences: Experience[] = [
           },
           {
             name: "Website Accessibility Auditor",
+            role: "Tech Lead",
             description:
               "Developed tool for running comprehensive accessibility scans against URLs.",
             descriptionTechnical:
@@ -133,6 +136,7 @@ export const experiences: Experience[] = [
         projects: [
           {
             name: "Fair Worlds",
+            role: "Individual Contributor",
             description:
               "Assisted software development efforts for numerous projects.",
             descriptionTechnical: "",
@@ -153,6 +157,7 @@ export const experiences: Experience[] = [
           },
           {
             name: "EchoDial",
+            role: "Tech Lead",
             description:
               "Dialer with powerful CRM to effectively automate sales outreach efforts.",
             descriptionTechnical:
@@ -181,6 +186,7 @@ export const experiences: Experience[] = [
           },
           {
             name: "Perl Street (YC W22)",
+            role: "Individual Contributor",
             url: "https://perlstreet.com",
             elements: ["Web", "API"],
             description: "Contributed to feature development for web app.",
@@ -213,14 +219,69 @@ export const experiences: Experience[] = [
       {
         title: "Senior Software Engineer",
         description:
-          "Lead and manage software consulting projects across global commercial, lubricant, chemicals, and renewables and new energy.",
+          "Led technical initiatives for products across global commercial, lubricant, chemicals, and renewables and new energy.",
         startDate: null,
         endDate: null,
-        achievements: [],
+        achievements: [
+          'Presented "Tech Talk" workshops for colleagues regarding topics like React Native for Mobile Development and OpenAPI Specifications for type-safe contracts between the client and server.'
+        ],
 
         projects: [
           {
+            name: "Ai",
+            elements: ["Web", "API"],
+            role: "Frontend Tech Lead",
+            description:
+              "Platform to centralize fragmented, unstructured, and multilingual lab results to train models for crafting new lubricants at unprecendented speeds and budgets.",
+            descriptionTechnical:
+              "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
+            url: null,
+            languages: ["TypeScript", "Python"],
+            databases: ["Postgres"],
+            frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
+            libraries: ["React", "Redux Toolkit", "D3"],
+            providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }],
+            accomplishments: []
+          },
+          {
+            name: "Shell Energy Insights",
+            elements: ["Web", "API"],
+            role: "Frontend Tech Lead",
+            description:
+              "Tech lead for the Shell Energy Insights Green Dealer initiative geared towards making it easier for customers to manage day-to-day energy needs while increasing efficiency, managing costs, and addressing decarbonization goals. Frontend built using React, TypeScript, Redux Toolkit, Styled Components.",
+            descriptionTechnical:
+              "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
+            url: "https://shellenergy.com/business/energy-insights",
+            languages: ["TypeScript", "Python"],
+            databases: ["Postgres"],
+            frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
+            libraries: ["React", "Redux Toolkit", "D3"],
+            providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }],
+            accomplishments: [
+              "Project established development/deployment standards for Next.js apps in Shell IT USA which served as a lighthouse for following projects."
+            ]
+          },
+          {
+            name: "Deal Analyzer",
+            elements: ["Web", "API"],
+            role: "Tech Lead",
+            description:
+              "Proprietary tool for crafting and managing high-stake deal analyses for business managers in the Shell Chemical division.",
+            descriptionTechnical:
+              "The frontend (React/Node.js) and backend (Golang/Gin) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
+            url: null,
+            languages: ["TypeScript", "Golang"],
+            databases: ["Postgres"],
+            frameworks: ["Gin", "Docker", "Kubernetes"],
+            libraries: ["React", "Redux", "D3"],
+            providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }],
+            accomplishments: [
+              "Project delivered $38M – $57M in business value and was nominated for the VP CIO award in Shell Chemicals."
+            ]
+          },
+          {
             name: "Customer Order Visibility Experience",
+            role: "Individual Contributor",
             elements: ["Web", "API"],
             description:
               "Dashboard for tracking large shipments in real time for the Global Commercial business.",

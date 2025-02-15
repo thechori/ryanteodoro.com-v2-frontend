@@ -152,7 +152,8 @@ function App() {
             },
             {
               title: "mOcKcAsE",
-              description: "Created NPM library for string formatting",
+              description:
+                "Created parody NPM library for obnoxious string formatting.",
               url: "https://www.npmjs.com/package/mockcase",
               date: "December 2024",
               skills: ["TypeScript", "Node.js"],
@@ -161,7 +162,7 @@ function App() {
             {
               title: "National Cortado Day",
               description:
-                "Created national food holiday for one of my favorite espresso drinks.",
+                "Created a national food holiday for one of my favorite espresso drinks. Officially recognized by Wikipedia and annually celebrated by people around the world now.",
               url: "https://www.nationalcortadoday.com",
               date: "December 2021",
               skills: ["HTML", "CSS"],
