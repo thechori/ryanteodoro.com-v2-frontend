@@ -70,13 +70,13 @@ function App() {
           </h2>
 
           {/* companies */}
-          {experiences.map((experience) => (
-            <div className="mb-10">
+          {experiences.map((experience, index) => (
+            <div key={index} className="mb-10">
               <div className="font-bold text-xl">{experience.company}</div>
 
               {/* roles within experience */}
-              {experience.roles.map((role) => (
-                <div>
+              {experience.roles.map((role, index) => (
+                <div key={index}>
                   <div className="flex justify-between">
                     <div>{role.title}</div>
                     {role.startDate && (
@@ -92,13 +92,16 @@ function App() {
 
                   {/* projects within role */}
                   <div>
-                    {role.projects.map((project) => (
-                      <div className="pl-4 mb-2">
+                    {role.projects.map((project, index) => (
+                      <div key={index} className="pl-4 mb-2">
                         <div className="font-semibold">{project.name}</div>
                         <div>{project.description}</div>
                         <div>
-                          {project.languages.map((language) => (
-                            <div className="text-white bg-teal-600 inline px-2 py-1 rounded-md text-sm mr-2">
+                          {project.languages.map((language, index) => (
+                            <div
+                              key={index}
+                              className="text-white bg-teal-600 inline px-2 py-1 rounded-md text-sm mr-2"
+                            >
                               {language}
                             </div>
                           ))}
@@ -182,8 +185,8 @@ function App() {
               ],
               platforms: ["DigitalOcean", "Twilio"]
             }
-          ].map((project) => (
-            <div className="mb-4">
+          ].map((project, index) => (
+            <div key={index} className="mb-4">
               <div className="flex justify-between">
                 <div className="flex">
                   <div className="font-semibold pr-1">{project.title}</div>
@@ -199,8 +202,11 @@ function App() {
 
               <div>{project.description}</div>
               <div>
-                {project.skills?.map((skill) => (
-                  <div className="text-white bg-teal-600 inline px-2 py-1 rounded-md text-sm mr-2">
+                {project.skills?.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="text-white bg-teal-600 inline px-2 py-1 rounded-md text-sm mr-2"
+                  >
                     {skill}
                   </div>
                 ))}
