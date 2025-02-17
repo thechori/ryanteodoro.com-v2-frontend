@@ -24,6 +24,14 @@ export interface Provider {
   services: string[];
 }
 
+export type RoleType =
+  | "Design"
+  | "Frontend"
+  | "Backend"
+  | "Full stack"
+  | "Product owner"
+  | "Product manager";
+
 export type Element =
   | "Web"
   | "Mobile"
@@ -46,21 +54,8 @@ export interface Project {
   libraries: string[];
   providers: Provider[];
   accomplishments: string[];
-
-  // type: ProjectType[];
-  // technologies: string[];
-  // role: string;
-  // achievements: Achievement[];
-  // metrics?: ProjectMetric[];
-  // links?: {
-  //   github?: string;
-  //   demo?: string;
-  //   production?: string;
-  //   documentation?: string;
-  // };
 }
 
-// Enums and Types
 export type TechCategory =
   | "Frontend"
   | "Backend"

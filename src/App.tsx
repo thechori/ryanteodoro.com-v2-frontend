@@ -72,7 +72,16 @@ function App() {
           {/* companies */}
           {experiences.map((experience, index) => (
             <div key={index} className="mb-10">
-              <div className="font-bold text-xl">{experience.company}</div>
+              <div className="flex items-center">
+                <div className="font-bold text-xl mr-2">
+                  {experience.company}
+                </div>
+                {experience.url && (
+                  <a href={experience.url} target="_blank">
+                    <ExternalLink size={24} />
+                  </a>
+                )}
+              </div>
 
               {/* roles within experience */}
               {experience.roles.map((role, index) => (
@@ -94,7 +103,16 @@ function App() {
                   <div>
                     {role.projects.map((project, index) => (
                       <div key={index} className="pl-4 mb-2">
-                        <div className="font-semibold">{project.name}</div>
+                        <div className="flex items-center">
+                          <div className="font-semibold pr-2">
+                            {project.name}
+                          </div>
+                          {project.url && (
+                            <a href={project.url} target="_blank">
+                              <ExternalLink size={18} />
+                            </a>
+                          )}
+                        </div>
                         <div>{project.description}</div>
                         <div>
                           {project.languages.map((language, index) => (
@@ -127,22 +145,11 @@ function App() {
             {
               title: "Portfolio Website",
               description:
-                "React app for showcasing skills, experience, and projects.",
+                "React app for showcasing skills, experience, and projects. Created new data structures to improve organizing technical details about experiences because existing solutions (e.g., https://jsonresume.org/schema) did not satisfy personal needs.",
               url: "https://ryanteodoro.com",
               date: "February 2025",
               skills: ["React", "TailwindCSS"],
               platforms: ["Netlify"]
-            },
-            {
-              title: "Live Stream Real-Time Language Translator",
-              description:
-                "Created Python app to process live stream data via URL, convert audio to text, translate text from English to Spanish, then run final transform to convert text to speech. Built using fully open-source Vosk models and ran locally on edge hardware. Also built a set of scripts to automate the retrieval of audio files from a website, transcribe them, then use a trained voice model to output summaries using AI to save staff time on mundane, reptitive tasks.",
-              url: null,
-              languages: ["Python"],
-              databases: null,
-              frameworks: [],
-              libraries: ["vosk"],
-              providers: ["OpenAI", "ElevenLabs"]
             },
             {
               title: "Fern (YC W23)",
@@ -161,6 +168,18 @@ function App() {
               date: "December 2024",
               skills: ["TypeScript", "Node.js"],
               platforms: ["NPM"]
+            },
+            {
+              title: "Live Stream Real-Time Language Translator",
+              description:
+                "Created Python app to process live stream data via URL, convert audio to text, translate text from English to Spanish, then run final transform to convert text to speech. Built using fully open-source Vosk models and ran locally on edge hardware. Also built a set of scripts to automate the retrieval of audio files from a website, transcribe them, then use a trained voice model to output summaries using AI to save staff time on mundane, reptitive tasks.",
+              url: null,
+              date: "October 2024",
+              languages: ["Python"],
+              databases: null,
+              frameworks: [],
+              libraries: ["vosk"],
+              providers: ["OpenAI", "ElevenLabs"]
             },
             {
               title: "National Cortado Day",

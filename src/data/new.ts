@@ -129,7 +129,7 @@ export const experiences: Experience[] = [
       {
         title: "Founder & CEO",
         description:
-          "Lead and manage software consulting projects across many different industries.",
+          "Lead software projects for consulting clients and internal product ventures.",
         startDate: new Date(2017, 10),
         endDate: null,
         achievements: [],
@@ -160,8 +160,13 @@ export const experiences: Experience[] = [
             role: "Tech Lead",
             description:
               "Dialer with powerful CRM to effectively automate sales outreach efforts.",
-            descriptionTechnical:
-              "Home-baked authentication system which leveraged JWTs.",
+            descriptionTechnical: `Led engineering team to create power dialer SaaS platform (think Google Voice + automation + CRM) built using React, TypeScript, Mantine UI, Node.js, and Postgres.
+Configured and managed external systems (e.g., AWS for S3 [storage] and SES [emails], Twilio [SMS/voice calls], Stripe [payment processing], Sentry [error logging], Amplitude [product/user analytics], BetterStack [uptime monitoring]).
+Setup Stripe for payment processing to charge customer credit cards via recurring monthly subscriptions using 3 different tiers, as well as free trials to promote user adoption.
+Prototyped system to provide on-demand AI-generated call transcriptions using Twilio Intelligence APIs for retrieving sentences from recorded conversations.
+Setup Knex.js as PostgreSQL interface using query building, migrations, seeds, and database-driven TypeScript schema generation to ensure database was the application’s source of truth for data structures (which cascaded to frontend for end-to-end type safety).
+Stood up WordPress website alongside React SPA for marketing and SEO purposes -- achieved #2 spot on Google Search results for target search keyword. Home-baked authentication system which leveraged JWTs.
+`,
             url: null,
             elements: ["Web", "API"],
             languages: ["TypeScript", "SQL"],
@@ -223,25 +228,35 @@ export const experiences: Experience[] = [
         startDate: null,
         endDate: null,
         achievements: [
+          "Nominated to serve on Shell Design System committee, providing steer on features and contributing to inner source component library",
+          "Managed application security by leveraging static code analysis tools (e.g., SonarQube) and dependency scanners (e.g., Mend [formerly Whitesource]) to comply with strict organization standards",
+          "Formulated system to programmatically consume OpenAPI Spec (Swagger) documents from backend API systems and auto generate TypeScript schemas to establish strong, dependable links between the client and server-side applications which were historically done manually",
+          "Contributed updates and fixes to application CI/CD pipeline configurations using CircleCI, Docker, Kubernetes, and GitHub Actions",
+          "Wrote unit, integration, and E2E tests using Jest, Enzyme, React Testing Library, and Cypress following BDD/TDD methodologies",
+          "Coordinated with design, product, and engineering resources to ensure Scrum sprints were on track and tasks/stories were prioritized well with the end-user experience at the center of all decisions",
+          "Assisted recruiting efforts within the Houston offices through phone screens, technical code assessments, and onsite interviews",
           'Presented "Tech Talk" workshops for colleagues regarding topics like React Native for Mobile Development and OpenAPI Specifications for type-safe contracts between the client and server.'
         ],
 
         projects: [
           {
-            name: "Ai",
+            name: "SPARK Frictionless Data Access",
             elements: ["Web", "API"],
             role: "Frontend Tech Lead",
             description:
-              "Platform to centralize fragmented, unstructured, and multilingual lab results to train models for crafting new lubricants at unprecendented speeds and budgets.",
+              "Establish the single source of truth for all the formulation and testing data held within Shell.",
+            // "Platform to centralize fragmented, unstructured, and multilingual lab results to train models for crafting new lubricants at unprecendented speeds and budgets.",
             descriptionTechnical:
-              "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
-            url: null,
+              "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS. Python-based predictive model was created and managed by data scientist",
+            url: "https://www.shell.com/business-customers/lubricants-for-business/perspectives/deep-dive-with-sravani-gullapalli.html",
             languages: ["TypeScript", "Python"],
             databases: ["Postgres"],
             frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
             libraries: ["React", "Redux Toolkit", "D3"],
             providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }],
-            accomplishments: []
+            accomplishments: [
+              "SPARK Frictionless Data Access recently won the Shell.ai Data Impact Award"
+            ]
           },
           {
             name: "Shell Energy Insights",
