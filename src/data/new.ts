@@ -225,8 +225,8 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
         title: "Senior Software Engineer",
         description:
           "Led technical initiatives for products across global commercial, lubricant, chemicals, and renewables and new energy.",
-        startDate: null,
-        endDate: null,
+        startDate: new Date(2019, 0),
+        endDate: new Date(2023, 5),
         achievements: [
           "Nominated to serve on Shell Design System committee, providing steer on features and contributing to inner source component library",
           "Managed application security by leveraging static code analysis tools (e.g., SonarQube) and dependency scanners (e.g., Mend [formerly Whitesource]) to comply with strict organization standards",

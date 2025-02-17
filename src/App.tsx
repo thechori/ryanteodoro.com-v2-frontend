@@ -236,6 +236,24 @@ function App() {
           <Button title="see all projects" className="my-2" variant="outline" />
         </section>
 
+        <section id="experience" className="mb-20">
+          <h2 className="text-3xl font-bold mb-4 3b-1 border-b-2">education</h2>
+
+          <div className="mb-4">
+            <div className="flex justify-between">
+              <div className="flex">
+                <div className="font-semibold pr-1">
+                  University of Houston - Victoria
+                </div>
+              </div>
+              <div>May 2013</div>
+            </div>
+            <div>B.S. Computer Science</div>
+            <div>Graduated Cum Laude</div>
+            <div>Dean's List</div>
+          </div>
+        </section>
+
         <section id="footer">
           <p className="mt-20 text-slate-400">
             This website was created by yours truly. If you'd like to see the
