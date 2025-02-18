@@ -1,7 +1,7 @@
 import { ExternalLink } from "lucide-react";
 import { format } from "date-fns";
 //
-import Button from "./components/button";
+// import Button from "./components/button";
 import Sidebar from "./components/sidebar";
 import { experiences } from "./data/new";
 
@@ -132,11 +132,11 @@ function App() {
             </div>
           ))}
 
-          <Button
+          {/* <Button
             title="see all experiences"
             className="my-2"
             variant="outline"
-          />
+          /> */}
         </section>
 
         <section id="projects" className="mb-20">
@@ -233,7 +233,7 @@ function App() {
             </div>
           ))}
 
-          <Button title="see all projects" className="my-2" variant="outline" />
+          {/* <Button title="see all projects" className="my-2" variant="outline" /> */}
         </section>
 
         <section id="experience" className="mb-20">
