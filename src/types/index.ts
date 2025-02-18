@@ -1,67 +1,61 @@
 export interface Experience {
   company: string;
+  url: string | null;
   location: string;
-  roles: Role[];
-  technologies: TechnologyDetail[];
   industries: Industry[];
-  startDate: Date;
-  endDate: Date | "Present";
-  type: "Full time" | "Contract" | "Internship" | "Founder";
-  projects: Project[];
+  roles: Role[];
 }
 
 export interface Role {
   title: string;
-  startDate: Date;
-  endDate: Date | "Present";
-  achievements: Achievement[];
-  projectIds: string[]; // Reference to projects worked on in this role
+  type: "Full time" | "Part time" | "Contract" | "Internship" | "Founder";
+  startDate: Date | null;
+  endDate: Date | null;
+  achievements: string[];
+  projects: Project[];
+  description: string;
 }
+
+export interface Provider {
+  name: string;
+  services: string[];
+}
+
+export type RoleType =
+  | "Design"
+  | "Frontend"
+  | "Backend"
+  | "Full stack"
+  | "Product owner"
+  | "Product manager";
+
+export type Element =
+  | "Web"
+  | "Mobile"
+  | "API"
+  | "Bot"
+  | "Desktop"
+  | "Game"
+  | "Tool";
 
 export interface Project {
-  id: string;
   name: string;
-  description: string;
-  startDate: Date;
-  endDate: Date | "Present";
-  type: ProjectType[];
-  technologies: string[];
-  teamSize?: number;
   role: string;
-  achievements: Achievement[];
-  metrics?: ProjectMetric[];
-  links?: {
-    github?: string;
-    demo?: string;
-    production?: string;
-    documentation?: string;
-  };
-  relatedProjects?: string[]; // IDs of related projects
-}
-
-export interface ProjectMetric {
-  type: "Financial" | "Performance" | "Adoption" | "Ranking" | "Optimization";
-  value: string;
-  date?: Date;
-}
-
-export interface Achievement {
   description: string;
-  metrics?: ProjectMetric[];
-  technologies: string[];
-  projectType: ProjectType[];
+  descriptionTechnical: string;
+  elements: Element[];
+  url: string | null;
+  relatedLinks: string[];
+  deprecated: boolean;
+  proprietary: boolean;
+  languages: string[];
+  databases: string[];
+  frameworks: string[];
+  libraries: string[];
+  providers: Provider[];
+  accomplishments: string[];
 }
 
-export interface TechnologyDetail {
-  name: string;
-  category: TechCategory;
-  proficiencyLevel: 1 | 2 | 3 | 4 | 5; // 5 being expert
-  // removing YOE - these values should be calculated at the high level
-  // of the resume based on the project start date
-  // yearsOfExperience: number;
-}
-
-// Enums and Types
 export type TechCategory =
   | "Frontend"
   | "Backend"

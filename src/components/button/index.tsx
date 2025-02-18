@@ -1,12 +1,13 @@
 import React from "react";
 
 const variantStyles = {
-  primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-500",
+  primary:
+    "bg-blue-600 dark:bg-blue-300 hover:bg-blue-700 text-white dark:text-black focus:ring-blue-500",
   secondary: "bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500",
   success: "bg-green-600 hover:bg-green-700 text-white focus:ring-green-500",
   danger: "bg-red-600 hover:bg-red-700 text-white focus:ring-red-500",
   outline:
-    "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500"
+    "border-2 border-blue-600 dark:border-blue-300 text-blue-600 dark:text-blue-300 hover:bg-blue-50 dark:hover:bg-transparent focus:ring-blue-500"
 };
 
 const sizeStyles = {
