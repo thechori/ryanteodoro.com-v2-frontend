@@ -5,13 +5,11 @@ export const experiences: Experience[] = [
     company: "4ccessible",
     url: "https://4ccessible.com",
     location: "Houston, TX",
-    startDate: new Date(2024, 3),
     industries: ["Accessibility", "Technology"],
-    type: "Founder",
-    endDate: null,
     roles: [
       {
         title: "Founder & CEO",
+        type: "Founder",
         description:
           "Lead and manage projects to make the internet accessible for the blind and visually impaired.",
         startDate: new Date(2024, 3),
@@ -30,6 +28,9 @@ export const experiences: Experience[] = [
               "Flagship tool that enables navigation of the web using just your voice.",
             descriptionTechnical: "",
             url: "https://chromewebstore.google.com/detail/4ccessible/jfpppiodkeblpkbpilccpoalkhnpopei?pli=1",
+            relatedLinks: [],
+            deprecated: false,
+            proprietary: false,
             accomplishments: [],
             elements: ["Web", "API"],
             languages: ["TypeScript"],
@@ -63,6 +64,9 @@ export const experiences: Experience[] = [
               "Streaming platform centered around accessible for the blind community.",
             descriptionTechnical: "",
             url: "https://streamfortheblind.com",
+            relatedLinks: [],
+            deprecated: false,
+            proprietary: false,
             elements: ["Web", "API"],
             languages: ["TypeScript"],
             databases: ["Postgres", "Redis"],
@@ -92,6 +96,9 @@ export const experiences: Experience[] = [
             descriptionTechnical:
               "Next.js frontend was deployed to Vercel using their CI/CD pipeline and using branch merge triggers. The audit page allowed users to submit a URL which would fire off an API call to the dedicated backend service (Node.js/Express) which was hosted onsite on an old MacBook Pro via ngrok's tunneling service. This design decision was chosen because the cloud services at providers like DigitalOcean were extremely expensive for servers with powerful CPUs and GPUs which were necessary to run in-depth scans, especially in parallel when multiple scans were requested. This parallelism was made possible using clustering in the `puppeteer-cluster` NPM library. All requests and results were stored to a Postgres DB hosted via Supabase and this information was used for lead generation purposes.",
             url: null,
+            relatedLinks: [],
+            deprecated: true,
+            proprietary: false,
             elements: ["Web", "API"],
             languages: ["TypeScript"],
             frameworks: ["Next.js", "Express"],
@@ -122,11 +129,9 @@ export const experiences: Experience[] = [
     url: "https://teodorosystems.com",
     location: "Houston, TX",
     industries: ["Consulting"],
-    startDate: new Date(2017, 10),
-    endDate: null,
-    type: "Founder",
     roles: [
       {
+        type: "Founder",
         title: "Founder & CEO",
         description:
           "Lead software projects for consulting clients and internal product ventures.",
@@ -141,6 +146,9 @@ export const experiences: Experience[] = [
               "Assisted software development efforts for numerous projects.",
             descriptionTechnical: "",
             url: "https://fairworlds.com",
+            relatedLinks: [],
+            deprecated: false,
+            proprietary: false,
             elements: ["Web", "API"],
             languages: ["TypeScript", "Java", "SQL"],
             databases: ["Postgres"],
@@ -168,6 +176,9 @@ Setup Knex.js as PostgreSQL interface using query building, migrations, seeds, a
 Stood up WordPress website alongside React SPA for marketing and SEO purposes -- achieved #2 spot on Google Search results for target search keyword. Home-baked authentication system which leveraged JWTs.
 `,
             url: null,
+            relatedLinks: [],
+            deprecated: true,
+            proprietary: false,
             elements: ["Web", "API"],
             languages: ["TypeScript", "SQL"],
             databases: ["Postgres"],
@@ -193,6 +204,9 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             name: "Perl Street (YC W22)",
             role: "Individual Contributor",
             url: "https://perlstreet.com",
+            relatedLinks: [],
+            deprecated: false,
+            proprietary: false,
             elements: ["Web", "API"],
             description: "Contributed to feature development for web app.",
             descriptionTechnical: "",
@@ -217,12 +231,10 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
     url: "https://shell.com",
     location: "Houston, TX",
     industries: ["Energy"],
-    startDate: new Date(2019, 0),
-    endDate: new Date(2023, 5),
-    type: "Full time",
     roles: [
       {
         title: "Senior Software Engineer",
+        type: "Full time",
         description:
           "Led technical initiatives for products across global commercial, lubricant, chemicals, and renewables and new energy.",
         startDate: new Date(2019, 0),
@@ -248,7 +260,12 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             // "Platform to centralize fragmented, unstructured, and multilingual lab results to train models for crafting new lubricants at unprecendented speeds and budgets.",
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS. Python-based predictive model was created and managed by data scientist",
-            url: "https://www.shell.com/business-customers/lubricants-for-business/perspectives/deep-dive-with-sravani-gullapalli.html",
+            url: null,
+            relatedLinks: [
+              "https://www.shell.com/business-customers/lubricants-for-business/perspectives/deep-dive-with-sravani-gullapalli.html"
+            ],
+            deprecated: false,
+            proprietary: true,
             languages: ["TypeScript", "Python"],
             databases: ["Postgres"],
             frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
@@ -267,6 +284,9 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
             url: "https://shellenergy.com/business/energy-insights",
+            relatedLinks: [],
+            deprecated: false,
+            proprietary: false,
             languages: ["TypeScript", "Python"],
             databases: ["Postgres"],
             frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
@@ -285,6 +305,9 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Golang/Gin) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
             url: null,
+            relatedLinks: [],
+            deprecated: false,
+            proprietary: true,
             languages: ["TypeScript", "Golang"],
             databases: ["Postgres"],
             frameworks: ["Gin", "Docker", "Kubernetes"],
@@ -301,14 +324,141 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             description:
               "Dashboard for tracking large shipments in real time for the Global Commercial business.",
             descriptionTechnical:
-              'Codename: "Mango" - this project integrated with SAP to pull large lubricant delivery information to Shell partners. The frontend (React/Node.js) and backend (Golang/GraphQL) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team.',
+              "Project integrated with SAP to pull large lubricant delivery information to Shell partners. The frontend (React/Node.js) and backend (Golang/GraphQL) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team.",
             url: "https://www.shell.com/business-customers/chemicals/doing-business-with-us/customer-portal.html",
+            deprecated: false,
+            proprietary: false,
+            relatedLinks: [],
             languages: ["TypeScript", "Golang", "GraphQL"],
             databases: ["Postgres"],
             frameworks: ["Apollo", "Docker", "Kubernetes"],
             libraries: ["React"],
             providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }],
             accomplishments: []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "United Rentals (formerly BlueLine Rental)",
+    url: "https://unitedrentals.com",
+    location: "Houston, TX",
+    industries: ["Construction"],
+    roles: [
+      {
+        title: "Senior Web/Mobile Developer",
+        type: "Full time",
+        description:
+          "Developed web and mobile applications to help with digitalization efforts for company which.",
+        startDate: new Date(2018, 0),
+        endDate: new Date(2018, 11),
+        achievements: [
+          "Company was acquired for $2.1 billion in deal to United Rental"
+        ],
+
+        projects: [
+          {
+            name: "Digital Service Management Application",
+            elements: ["Mobile", "API"],
+            role: "Individual Contributor",
+            description: "Tablet app built to enable quick management of ",
+            descriptionTechnical:
+              "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS. Python-based predictive model was created and managed by data scientist",
+            url: null,
+            relatedLinks: [
+              "https://www.shell.com/business-customers/lubricants-for-business/perspectives/deep-dive-with-sravani-gullapalli.html"
+            ],
+            deprecated: false,
+            proprietary: true,
+            languages: ["TypeScript", "Python"],
+            databases: ["Postgres"],
+            frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
+            libraries: ["React", "Redux Toolkit", "D3"],
+            providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }],
+            accomplishments: [
+              "SPARK Frictionless Data Access recently won the Shell.ai Data Impact Award"
+            ]
+          },
+          {
+            name: "Trucker Driver Safety Initiative",
+            role: "Tech Lead",
+            url: null,
+            relatedLinks: [],
+            deprecated: true,
+            proprietary: true,
+            description:
+              "Captured telemetry data from IoT devices to alert fleet drivers of infractions and promote safe driving",
+            descriptionTechnical:
+              "Consumed historical geolocation and telemetry data from drivers to analyze driver infractions (e.g., speeding), summarize information, then send weekly emails notifying them. Integration with Salesforce was required because the third-party system API did not return data in a format that allowed for native relationships and associations between vehicles and drivers.",
+            languages: ["JavaScript", "SQL"],
+            databases: ["MySQL"],
+            elements: ["Tool"],
+            libraries: [],
+            frameworks: ["Node.js"],
+            providers: [
+              { name: "Salesforce", services: ["API"] },
+              { name: "Geotab", services: ["API"] }
+            ],
+            accomplishments: [
+              "Reduced driving related-violations which improved company safety and profitability"
+            ]
+          },
+          {
+            name: "Company Website",
+            description:
+              "Worked on the website which helped to facilitate equipment renting, used equipment sales, and order management.",
+            descriptionTechnical:
+              "Worked on the React frontend which used Redux for state management and SCSS/SASS for styling. Application was deployed via in-house CI/CD pipeline using Jenkins. ",
+            accomplishments: [],
+            databases: ["MySQL"],
+            elements: ["API", "Web"],
+            languages: ["JavaScript", "SQL"],
+            libraries: ["React"],
+            frameworks: ["Node.js"],
+            providers: [],
+            role: "Individual Contributor",
+            url: null,
+            relatedLinks: [],
+            deprecated: true,
+            proprietary: false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    company: "University of Houston",
+    industries: ["Education"],
+    location: "Houston, TX",
+    url: "https://uh.edu",
+    roles: [
+      {
+        title: "Mobile Application Developer",
+        startDate: new Date(2017, 0),
+        endDate: new Date(2017, 11),
+        type: "Contract",
+        achievements: [],
+        description: "",
+        projects: [
+          {
+            name: "UH Redline",
+            description:
+              "Mobile app for the university, used by students, faculty, and guests of the school.",
+            descriptionTechnical:
+              "Built using Angular and the Ionic mobile framework for cross-platform development. Backend API was written in PHP and run onsite at the university's data center.",
+            databases: ["MySQL"],
+            languages: ["SQL", "JavaScript", "HTML", "CSS", "PHP"],
+            libraries: ["Angular", "Ionic"],
+            accomplishments: [],
+            elements: ["API", "Mobile"],
+            role: "Individual Contributor",
+            providers: [],
+            frameworks: [],
+            url: null,
+            relatedLinks: [],
+            deprecated: true,
+            proprietary: false
           }
         ]
       }

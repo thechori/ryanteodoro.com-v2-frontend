@@ -248,9 +248,9 @@ function App() {
               </div>
               <div>May 2013</div>
             </div>
-            <div>B.S. Computer Science</div>
-            <div>Graduated Cum Laude</div>
-            <div>Dean's List</div>
+            <div>Bachelor of Science in Computer Science</div>
+            <div>Graduated Cum Laude with 3.52 GPA</div>
+            <div>Dean's List recipient</div>
           </div>
         </section>
 

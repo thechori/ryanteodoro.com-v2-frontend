@@ -2,16 +2,13 @@ export interface Experience {
   company: string;
   url: string | null;
   location: string;
-  roles: Role[];
   industries: Industry[];
-  startDate: Date;
-  endDate: Date | null;
-  type: "Full time" | "Contract" | "Internship" | "Founder";
-  // projects: Project[];
+  roles: Role[];
 }
 
 export interface Role {
   title: string;
+  type: "Full time" | "Contract" | "Internship" | "Founder";
   startDate: Date | null;
   endDate: Date | null;
   achievements: string[];
@@ -48,6 +45,9 @@ export interface Project {
   descriptionTechnical: string;
   elements: Element[];
   url: string | null;
+  relatedLinks: string[];
+  deprecated: boolean;
+  proprietary: boolean;
   languages: string[];
   databases: string[];
   frameworks: string[];
