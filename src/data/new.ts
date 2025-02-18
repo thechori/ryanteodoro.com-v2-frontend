@@ -366,22 +366,20 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS. Python-based predictive model was created and managed by data scientist",
             url: null,
-            relatedLinks: [
-              "https://www.shell.com/business-customers/lubricants-for-business/perspectives/deep-dive-with-sravani-gullapalli.html"
-            ],
-            deprecated: false,
+            relatedLinks: [],
+            deprecated: true,
             proprietary: true,
-            languages: ["TypeScript", "Python"],
-            databases: ["Postgres"],
-            frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
-            libraries: ["React", "Redux Toolkit", "D3"],
-            providers: [{ name: "AWS", services: ["S3", "EKS", "RDS"] }],
+            languages: ["JavaScript", "SQL"],
+            databases: ["MySQL"],
+            frameworks: ["Cordova"],
+            libraries: ["React", "Redux"],
+            providers: [],
             accomplishments: [
-              "SPARK Frictionless Data Access recently won the Shell.ai Data Impact Award"
+              "Application enabled equipment service workers to minimize turnaround time during maintenance appointments."
             ]
           },
           {
-            name: "Trucker Driver Safety Initiative",
+            name: "Driver Fleet Safety Initiative",
             role: "Tech Lead",
             url: null,
             relatedLinks: [],
@@ -456,9 +454,29 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             providers: [],
             frameworks: [],
             url: null,
-            relatedLinks: [],
+            relatedLinks: [
+              "https://thedailycougar.com/2015/04/13/redline-app-brings-together-uh-students/"
+            ],
             deprecated: true,
             proprietary: false
+          },
+          {
+            name: "UIT Help Desk Chat Widget",
+            role: "Tech Lead",
+            description:
+              "Widget that could be included on any UH website which would allow users to easily connect to and chat with support agents.",
+            descriptionTechnical: "",
+            languages: ["JavaScript", "HTML", "CSS"],
+            libraries: ["Webpack"],
+            frameworks: ["Vue"],
+            elements: ["API", "Web"],
+            url: "https://uh.edu/infotech/help/",
+            relatedLinks: [],
+            databases: ["MySQL"],
+            proprietary: false,
+            deprecated: false,
+            providers: [],
+            accomplishments: []
           }
         ]
       }
