@@ -45,6 +45,15 @@ export const projects: PersonalProject[] = [
     additionalTags: []
   },
   {
+    title: "Crypto Trading Bot",
+    description:
+      "Automated trading bot that used moving average strategies to automate micro trades 24 hours a day, 7 days a week.",
+    url: null,
+    date: new Date(2021, 7),
+    tags: ["JavaScript", "Node.js", "Binance API", "Kraken API", "Twilio"],
+    additionalTags: []
+  },
+  {
     title: "Never Stolen",
     description: "Alarm app to prevent thieves from stealing your MacBook.",
     url: "https://neverstolen.ryanteodoro.com",
