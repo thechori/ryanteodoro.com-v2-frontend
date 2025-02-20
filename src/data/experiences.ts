@@ -73,7 +73,7 @@ export const experiences: Experience[] = [
             name: "Stream for the Blind",
             role: "Tech Lead",
             description:
-              "Streaming platform centered around accessible for the blind community.",
+              "Streaming platform centered around accessibility for the blind community.",
             descriptionTechnical: "",
             url: "https://streamfortheblind.com",
             relatedLinks: [],
@@ -97,7 +97,7 @@ export const experiences: Experience[] = [
             languages: ["TypeScript"],
             databases: ["Postgres", "Redis"],
             frameworks: [],
-            libraries: ["React", "", "ffmpeg"],
+            libraries: ["React", "ffmpeg"],
             accomplishments: [],
             providers: [
               {
@@ -223,8 +223,8 @@ export const experiences: Experience[] = [
 Configured and managed external systems (e.g., AWS for S3 [storage] and SES [emails], Twilio [SMS/voice calls], Stripe [payment processing], Sentry [error logging], Amplitude [product/user analytics], BetterStack [uptime monitoring]).
 Setup Stripe for payment processing to charge customer credit cards via recurring monthly subscriptions using 3 different tiers, as well as free trials to promote user adoption.
 Prototyped system to provide on-demand AI-generated call transcriptions using Twilio Intelligence APIs for retrieving sentences from recorded conversations.
-Setup Knex.js as PostgreSQL interface using query building, migrations, seeds, and database-driven TypeScript schema generation to ensure database was the application’s source of truth for data structures (which cascaded to frontend for end-to-end type safety).
-Stood up WordPress website alongside React SPA for marketing and SEO purposes -- achieved #2 spot on Google Search results for target search keyword. Home-baked authentication system which leveraged JWTs.
+Set up Knex.js as PostgreSQL interface using query building, migrations, seeds, and database-driven TypeScript schema generation to ensure database was the application’s source of truth for data structures (which cascaded to frontend for end-to-end type safety).
+Stood up WordPress website alongside React SPA for marketing and SEO purposes -- achieved #2 spot on Google Search results for target search keyword. Custom-built authentication system which leveraged JWTs.
 `,
             url: null,
             relatedLinks: [],
@@ -247,7 +247,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             languages: ["TypeScript", "SQL"],
             databases: ["Postgres"],
             frameworks: ["Express"],
-            libraries: ["React", "Mantine UI", ""],
+            libraries: ["React", "Mantine UI"],
             providers: [
               {
                 name: "DigitalOcean",
@@ -330,7 +330,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             role: "Frontend Tech Lead",
             description:
               "Establish the single source of truth for all the formulation and testing data held within Shell.",
-            // "Platform to centralize fragmented, unstructured, and multilingual lab results to train models for crafting new lubricants at unprecendented speeds and budgets.",
+            // "Platform to centralize fragmented, unstructured, and multilingual lab results to train models for crafting new lubricants at unprecedented speeds and budgets.",
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS. Python-based predictive model was created and managed by data scientist",
             url: null,
@@ -363,7 +363,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             technicalElements: ["Frontend", "Backend"],
             role: "Frontend Tech Lead",
             description:
-              "Tech lead for the Shell Energy Insights Green Dealer initiative geared towards making it easier for customers to manage day-to-day energy needs while increasing efficiency, managing costs, and addressing decarbonization goals.",
+              "Tech lead for the Shell Energy Insights Green Dealer initiative, helping customers manage energy needs, improve efficiency, reduce costs, and meet decarbonization goals.",
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
             url: "https://shellenergy.com/business/energy-insights",
@@ -427,7 +427,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             description:
               "Dashboard for tracking large shipments in real time for the Global Commercial business.",
             descriptionTechnical:
-              "Project integrated with SAP to pull large lubricant delivery information to Shell partners. The frontend (React/Node.js) and backend (Golang/GraphQL) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team.",
+              "Project integrated with SAP to provide Shell partners with real-time lubricant delivery data. The frontend (React/Node.js) and backend (Golang/GraphQL) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team.",
             url: "https://www.shell.com/business-customers/chemicals/doing-business-with-us/customer-portal.html",
             deprecated: false,
             proprietary: false,
