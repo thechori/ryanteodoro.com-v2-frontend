@@ -1,11 +1,18 @@
+import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { format } from "date-fns";
 //
-// import Button from "./components/button";
 import Sidebar from "./components/sidebar";
-import { experiences } from "./data/new";
+import { Badge } from "./components/badge";
+import Button from "./components/button";
+import { projects } from "./data/projects";
+import { experiences } from "./data/experiences";
+
+const MAX_EXPERIENCES_TO_SHOW = 3;
 
 function App() {
+  const [showAllExperiences, setShowAllExperiences] = useState(false);
+
   return (
     <main className="container mx-auto max-w-[1200px] px-4 flex flex-col sm:flex-row justify-center sm:pt-16 pb-4">
       <Sidebar />
@@ -70,142 +77,83 @@ function App() {
           </h2>
 
           {/* companies */}
-          {experiences.map((experience, index) => (
-            <div key={index} className="mb-10">
-              <div className="flex items-center">
-                <div className="font-bold text-xl mr-2">
-                  {experience.company}
-                </div>
-                {experience.url && (
-                  <a href={experience.url} target="_blank">
-                    <ExternalLink size={24} />
-                  </a>
-                )}
-              </div>
-
-              {/* roles within experience */}
-              {experience.roles.map((role, index) => (
-                <div key={index}>
-                  <div className="flex justify-between">
-                    <div>{role.title}</div>
-                    {role.startDate && (
-                      <div>
-                        {format(role.startDate, "MMMM yyyy")} -{" "}
-                        {role.endDate
-                          ? format(role.endDate, "MMMM yyyy")
-                          : "Present"}
-                      </div>
-                    )}
+          {experiences
+            .filter((_, index) =>
+              showAllExperiences ? true : index < MAX_EXPERIENCES_TO_SHOW
+            )
+            .map((experience, index) => (
+              <div key={index} className="mb-10">
+                <div className="flex items-center">
+                  <div className="font-bold text-xl mr-2">
+                    {experience.company}
                   </div>
-                  <div>{role.description}</div>
 
-                  {/* projects within role */}
-                  <div>
-                    {role.projects.map((project, index) => (
-                      <div key={index} className="pl-4 mb-2">
-                        <div className="flex items-center">
-                          <div className="font-semibold pr-2">
-                            {project.name}
-                          </div>
-                          {project.url && (
-                            <a href={project.url} target="_blank">
-                              <ExternalLink size={18} />
-                            </a>
-                          )}
+                  {experience.url && (
+                    <a href={experience.url} target="_blank">
+                      <ExternalLink size={24} />
+                    </a>
+                  )}
+                </div>
+
+                {/* roles within experience */}
+                {experience.roles.map((role, index) => (
+                  <div key={index}>
+                    <div className="flex justify-between">
+                      <div className="italic">{role.title}</div>
+                      {role.startDate && (
+                        <div className="font-semibold text-teal-600">
+                          {format(role.startDate, "MMM yyyy")} -{" "}
+                          {role.endDate
+                            ? format(role.endDate, "MMM yyyy")
+                            : "Present"}
                         </div>
-                        <div>{project.description}</div>
-                        <div>
-                          {project.languages.map((language, index) => (
-                            <div
-                              key={index}
-                              className="text-white bg-teal-600 inline px-2 py-1 rounded-md text-sm mr-2"
-                            >
-                              {language}
+                      )}
+                    </div>
+                    <div>{role.description}</div>
+
+                    {/* projects within role */}
+                    <div className="mt-2">
+                      {role.projects.map((project, index) => (
+                        <div key={index} className="pl-4 mb-6">
+                          <div className="flex items-center">
+                            <div className="font-semibold pr-2">
+                              {project.name}
                             </div>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          ))}
+                            {project.url && (
+                              <a href={project.url} target="_blank">
+                                <ExternalLink size={18} />
+                              </a>
+                            )}
+                          </div>
+                          <div>{project.description}</div>
 
-          {/* <Button
-            title="see all experiences"
-            className="my-2"
-            variant="outline"
-          /> */}
+                          <div className="flex flex-wrap gap-2 mt-1">
+                            {project.tags.map((element, index) => (
+                              <Badge key={index}>{element}</Badge>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+
+          {!showAllExperiences && (
+            <Button
+              title="see all experiences"
+              className="my-2"
+              variant="outline"
+              onClick={() => setShowAllExperiences(true)}
+            />
+          )}
         </section>
 
         <section id="projects" className="mb-20">
           <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">projects</h2>
-          {[
-            {
-              title: "Portfolio Website",
-              description:
-                "React app for showcasing skills, experience, and projects. Created new data structures to improve organizing technical details about experiences because existing solutions (e.g., https://jsonresume.org/schema) did not satisfy personal needs.",
-              url: "https://ryanteodoro.com",
-              date: "February 2025",
-              skills: ["React", "TailwindCSS"],
-              platforms: ["Netlify"]
-            },
-            {
-              title: "Fern (YC W23)",
-              description:
-                "Contributed to open source library for the Fern API.",
-              url: "https://github.com/fern-api/fern",
-              date: "January 2025",
-              skills: ["TypeScript", "Node.js"],
-              platforms: ["Fern"]
-            },
-            {
-              title: "mOcKcAsE",
-              description:
-                "Created parody NPM library for obnoxious string formatting.",
-              url: "https://www.npmjs.com/package/mockcase",
-              date: "December 2024",
-              skills: ["TypeScript", "Node.js"],
-              platforms: ["NPM"]
-            },
-            {
-              title: "Live Stream Real-Time Language Translator",
-              description:
-                "Created Python app to process live stream data via URL, convert audio to text, translate text from English to Spanish, then run final transform to convert text to speech. Built using fully open-source Vosk models and ran locally on edge hardware. Also built a set of scripts to automate the retrieval of audio files from a website, transcribe them, then use a trained voice model to output summaries using AI to save staff time on mundane, reptitive tasks.",
-              url: null,
-              date: "October 2024",
-              languages: ["Python"],
-              databases: null,
-              frameworks: [],
-              libraries: ["vosk"],
-              providers: ["OpenAI", "ElevenLabs"]
-            },
-            {
-              title: "National Cortado Day",
-              description:
-                "Created a national food holiday for one of my favorite espresso drinks. Officially recognized by Wikipedia and annually celebrated by people around the world now.",
-              url: "https://www.nationalcortadoday.com",
-              date: "December 2021",
-              skills: ["HTML", "CSS"],
-              platforms: ["Wikipedia"]
-            },
-            {
-              title: "Never Stolen",
-              description:
-                "Alarm app to prevent thieves from stealing your MacBook.",
-              url: "https://neverstolen.ryanteodoro.com",
-              date: "March 2020",
-              skills: [
-                "React",
-                "Electron.js",
-                "Node.js",
-                "Socket.io (WebSockets)"
-              ],
-              platforms: ["DigitalOcean", "Twilio"]
-            }
-          ].map((project, index) => (
-            <div key={index} className="mb-4">
+          {projects.map((project, index) => (
+            <div key={index} className="mb-6">
               <div className="flex justify-between">
                 <div className="flex">
                   <div className="font-semibold pr-1">{project.title}</div>
@@ -216,12 +164,14 @@ function App() {
                   )}
                 </div>
 
-                <div>{project.date}</div>
+                <div className="font-semibold text-teal-600">
+                  {format(project.date, "MMM yyyy")}
+                </div>
               </div>
 
               <div>{project.description}</div>
-              <div>
-                {project.skills?.map((skill, index) => (
+              <div className="mt-1">
+                {project.tags?.map((skill, index) => (
                   <div
                     key={index}
                     className="text-white bg-teal-600 inline px-2 py-1 rounded-md text-sm mr-2"
@@ -246,11 +196,16 @@ function App() {
                   University of Houston - Victoria
                 </div>
               </div>
-              <div>May 2013</div>
+              <div className="font-semibold text-teal-600">May 2013</div>
             </div>
             <div>Bachelor of Science in Computer Science</div>
-            <div>Graduated Cum Laude with 3.52 GPA</div>
-            <div>Dean's List recipient</div>
+            <div className="flex flex-wrap gap-2 mt-1">
+              {["Graduated Cum Laude (3.52 GPA)", "Dean's List recipient"].map(
+                (element, index) => (
+                  <Badge key={index}>{element}</Badge>
+                )
+              )}
+            </div>
           </div>
         </section>
 
