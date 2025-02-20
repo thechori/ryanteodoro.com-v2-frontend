@@ -37,6 +37,15 @@ export const projects: PersonalProject[] = [
     additionalTags: []
   },
   {
+    title: "Tennis Court Reservation Bot",
+    description:
+      "Created a bot to reserve tennis courts at 6:00am when schedules opened to public on gym website. Ran within a DigitalOcean VPS and would trigger via simple cronjob schedule.",
+    url: null,
+    date: new Date(2023, 11),
+    tags: ["JavaScript", "Node.js", "Cypress.js", "Twilio", "DigitalOcean"],
+    additionalTags: []
+  },
+  {
     title: "National Cortado Day",
     description:
       "Created a national food holiday for one of my favorite espresso drinks. Officially recognized by Wikipedia and annually celebrated by people around the world now.",
