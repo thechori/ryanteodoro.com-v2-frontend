@@ -21,29 +21,33 @@ export interface Provider {
   services: string[];
 }
 
-export type RoleType =
-  | "Design"
+export type TechnicalElement =
   | "Frontend"
   | "Backend"
-  | "Full stack"
-  | "Product owner"
-  | "Product manager";
-
-export type Element =
-  | "Web"
   | "Mobile"
-  | "API"
-  | "Bot"
   | "Desktop"
-  | "Game"
-  | "Tool";
+  | "Library"
+  | "Framework"
+  | "Tool"
+  | "Bot"
+  | "Game";
+
+export interface PersonalProject {
+  title: string;
+  description: string;
+  url: string | null;
+  date: Date;
+  tags: string[];
+  additionalTags: string[];
+}
 
 export interface Project {
   name: string;
+  date: Date | null;
   role: string;
   description: string;
   descriptionTechnical: string;
-  elements: Element[];
+  technicalElements: TechnicalElement[];
   url: string | null;
   relatedLinks: string[];
   deprecated: boolean;
@@ -54,19 +58,8 @@ export interface Project {
   libraries: string[];
   providers: Provider[];
   accomplishments: string[];
+  badgeHighlights: string[]; // freeform - allows highlighting unique aspects of a project
 }
-
-export type TechCategory =
-  | "Frontend"
-  | "Backend"
-  | "Database"
-  | "Cloud"
-  | "AI"
-  | "Devops"
-  | "Testing"
-  | "Mobile"
-  | "Framework"
-  | "Language";
 
 export type Industry =
   | "Consulting"
@@ -89,21 +82,3 @@ export type Industry =
   | "Communications"
   | "Energy"
   | "Chemicals";
-
-export type ProjectType =
-  | "Web app"
-  | "Mobile app"
-  | "Browser extension"
-  | "API"
-  | "Database"
-  | "AI integration"
-  | "Infrastructure"
-  | "Analytics"
-  | "Architecture"
-  | "Security"
-  | "Accessibility"
-  | "Enterprise"
-  | "Migration"
-  | "SaaS"
-  | "Marketing"
-  | "Design system";

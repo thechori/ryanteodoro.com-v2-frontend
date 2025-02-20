@@ -31,8 +31,9 @@ export const experiences: Experience[] = [
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
+            badgeHighlights: [],
             accomplishments: [],
-            elements: ["Web", "API"],
+            technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript"],
             frameworks: ["Express"],
             databases: ["Postgres"],
@@ -67,7 +68,8 @@ export const experiences: Experience[] = [
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
-            elements: ["Web", "API"],
+            badgeHighlights: [],
+            technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript"],
             databases: ["Postgres", "Redis"],
             frameworks: [],
@@ -99,7 +101,8 @@ export const experiences: Experience[] = [
             relatedLinks: [],
             deprecated: true,
             proprietary: false,
-            elements: ["Web", "API"],
+            badgeHighlights: [],
+            technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript"],
             frameworks: ["Next.js", "Express"],
             databases: ["Postgres"],
@@ -149,7 +152,8 @@ export const experiences: Experience[] = [
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
-            elements: ["Web", "API"],
+            badgeHighlights: [],
+            technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript", "Java", "SQL"],
             databases: ["Postgres"],
             frameworks: ["Spring Boot"],
@@ -179,7 +183,8 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: true,
             proprietary: false,
-            elements: ["Web", "API"],
+            badgeHighlights: [],
+            technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript", "SQL"],
             databases: ["Postgres"],
             frameworks: ["Express"],
@@ -207,7 +212,8 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
-            elements: ["Web", "API"],
+            badgeHighlights: [],
+            technicalElements: ["Frontend", "Backend"],
             description: "Contributed to feature development for web app.",
             descriptionTechnical: "",
             languages: ["TypeScript"],
@@ -253,7 +259,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
         projects: [
           {
             name: "SPARK Frictionless Data Access",
-            elements: ["Web", "API"],
+            technicalElements: ["Frontend", "Backend"],
             role: "Frontend Tech Lead",
             description:
               "Establish the single source of truth for all the formulation and testing data held within Shell.",
@@ -262,10 +268,12 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS. Python-based predictive model was created and managed by data scientist",
             url: null,
             relatedLinks: [
-              "https://www.shell.com/business-customers/lubricants-for-business/perspectives/deep-dive-with-sravani-gullapalli.html"
+              "https://www.shell.com/business-customers/lubricants-for-business/perspectives/deep-dive-with-sravani-gullapalli.html",
+              "https://www.shell.com/what-we-do/technology-and-innovation/shell-techxplorer-digest/shell-techxplorer-digest-2020/_jcr_content/root/main/section/list_copy_copy_copy/list_item_copy_98181_1263721567/links/item0.stream/1669888660409/5f1e3168178e09f58ad54137906c5b81219302e7/deriving-quantifiable-value-from-frictionless-data-access-gullapalli.pdf"
             ],
             deprecated: false,
             proprietary: true,
+            badgeHighlights: [],
             languages: ["TypeScript", "Python"],
             databases: ["Postgres"],
             frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
@@ -277,7 +285,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
           },
           {
             name: "Shell Energy Insights",
-            elements: ["Web", "API"],
+            technicalElements: ["Frontend", "Backend"],
             role: "Frontend Tech Lead",
             description:
               "Tech lead for the Shell Energy Insights Green Dealer initiative geared towards making it easier for customers to manage day-to-day energy needs while increasing efficiency, managing costs, and addressing decarbonization goals. Frontend built using React, TypeScript, Redux Toolkit, Styled Components.",
@@ -287,6 +295,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
+            badgeHighlights: [],
             languages: ["TypeScript", "Python"],
             databases: ["Postgres"],
             frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
@@ -298,7 +307,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
           },
           {
             name: "Deal Analyzer",
-            elements: ["Web", "API"],
+            technicalElements: ["Frontend", "Backend"],
             role: "Tech Lead",
             description:
               "Proprietary tool for crafting and managing high-stake deal analyses for business managers in the Shell Chemical division.",
@@ -308,6 +317,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: false,
             proprietary: true,
+            badgeHighlights: [],
             languages: ["TypeScript", "Golang"],
             databases: ["Postgres"],
             frameworks: ["Gin", "Docker", "Kubernetes"],
@@ -320,7 +330,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
           {
             name: "Customer Order Visibility Experience",
             role: "Individual Contributor",
-            elements: ["Web", "API"],
+            technicalElements: ["Frontend", "Backend"],
             description:
               "Dashboard for tracking large shipments in real time for the Global Commercial business.",
             descriptionTechnical:
@@ -328,6 +338,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             url: "https://www.shell.com/business-customers/chemicals/doing-business-with-us/customer-portal.html",
             deprecated: false,
             proprietary: false,
+            badgeHighlights: [],
             relatedLinks: [],
             languages: ["TypeScript", "Golang", "GraphQL"],
             databases: ["Postgres"],
@@ -360,7 +371,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
         projects: [
           {
             name: "Digital Service Management Application",
-            elements: ["Mobile", "API"],
+            technicalElements: ["Mobile", "Backend"],
             role: "Individual Contributor",
             description: "Tablet app built to enable quick management of ",
             descriptionTechnical:
@@ -369,6 +380,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: true,
             proprietary: true,
+            badgeHighlights: [],
             languages: ["JavaScript", "SQL"],
             databases: ["MySQL"],
             frameworks: ["Cordova"],
@@ -385,18 +397,19 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: true,
             proprietary: true,
+            badgeHighlights: [],
             description:
               "Captured telemetry data from IoT devices to alert fleet drivers of infractions and promote safe driving",
             descriptionTechnical:
               "Consumed historical geolocation and telemetry data from drivers to analyze driver infractions (e.g., speeding), summarize information, then send weekly emails notifying them. Integration with Salesforce was required because the third-party system API did not return data in a format that allowed for native relationships and associations between vehicles and drivers.",
             languages: ["JavaScript", "SQL"],
             databases: ["MySQL"],
-            elements: ["Tool"],
+            technicalElements: ["Tool"],
             libraries: [],
             frameworks: ["Node.js"],
             providers: [
-              { name: "Salesforce", services: ["API"] },
-              { name: "Geotab", services: ["API"] }
+              { name: "Salesforce", services: ["Backend"] },
+              { name: "Geotab", services: ["Backend"] }
             ],
             accomplishments: [
               "Reduced driving related-violations which improved company safety and profitability"
@@ -410,7 +423,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
               "Worked on the React frontend which used Redux for state management and SCSS/SASS for styling. Application was deployed via in-house CI/CD pipeline using Jenkins. ",
             accomplishments: [],
             databases: ["MySQL"],
-            elements: ["API", "Web"],
+            technicalElements: ["Backend", "Frontend"],
             languages: ["JavaScript", "SQL"],
             libraries: ["React"],
             frameworks: ["Node.js"],
@@ -419,7 +432,8 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             url: null,
             relatedLinks: [],
             deprecated: true,
-            proprietary: false
+            proprietary: false,
+            badgeHighlights: []
           }
         ]
       }
@@ -449,7 +463,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             languages: ["SQL", "JavaScript", "HTML", "CSS", "PHP"],
             libraries: ["Angular", "Ionic"],
             accomplishments: [],
-            elements: ["API", "Mobile"],
+            technicalElements: ["Backend", "Mobile"],
             role: "Individual Contributor",
             providers: [],
             frameworks: [],
@@ -458,7 +472,8 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
               "https://thedailycougar.com/2015/04/13/redline-app-brings-together-uh-students/"
             ],
             deprecated: true,
-            proprietary: false
+            proprietary: false,
+            badgeHighlights: []
           },
           {
             name: "UIT Help Desk Chat Widget",
@@ -469,12 +484,13 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             languages: ["JavaScript", "HTML", "CSS"],
             libraries: ["Webpack"],
             frameworks: ["Vue"],
-            elements: ["API", "Web"],
+            technicalElements: ["Backend", "Frontend"],
             url: "https://uh.edu/infotech/help/",
             relatedLinks: [],
             databases: ["MySQL"],
-            proprietary: false,
             deprecated: false,
+            proprietary: false,
+            badgeHighlights: [],
             providers: [],
             accomplishments: []
           }
