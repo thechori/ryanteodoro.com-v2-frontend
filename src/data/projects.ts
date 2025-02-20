@@ -12,7 +12,8 @@ export const projects: PersonalProject[] = [
   },
   {
     title: "Fern (YC W23)",
-    description: "Contributed to open source library for the Fern API.",
+    description:
+      "Contributed to the open source library for Fern, a platform for using OpenAPI specifications to generate SDKs and docs.",
     url: "https://github.com/fern-api/fern",
     date: new Date(2025, 0),
     tags: ["TypeScript", "Node.js", "Fern"],
@@ -27,9 +28,9 @@ export const projects: PersonalProject[] = [
     additionalTags: []
   },
   {
-    title: "Live Stream Real-Time Language Translator",
+    title: "Live Stream Translator",
     description:
-      "Created Python app to process live stream data via URL, convert audio to text, translate text from English to Spanish, then run final transform to convert text to speech. Built using fully open-source Vosk models and ran locally on edge hardware. Also built a set of scripts to automate the retrieval of audio files from a website, transcribe them, then use a trained voice model to output summaries using AI to save staff time on mundane, reptitive tasks.",
+      "Created a Python app to translate radio broadcasts from English to Spanish in real time. Accomplished by fetching live stream audio via URL, transcribing audio to text (STT), translating text from English to Spanish, then running final transform to convert text to speech (TTS). Built using fully open-source Vosk models and ran locally on local hardware. Also built a set of scripts to automate the retrieval of audio files from a website, transcribe them, then use a trained voice model to output spoken summaries using AI to save staff time on repetitive, time-consuming tasks.",
     url: null,
     date: new Date(2024, 9),
     tags: ["Python", "Vosk", "OpenAI", "ElevenLabs"],
@@ -41,7 +42,7 @@ export const projects: PersonalProject[] = [
       "Created a national food holiday for one of my favorite espresso drinks. Officially recognized by Wikipedia and annually celebrated by people around the world now.",
     url: "https://www.nationalcortadoday.com",
     date: new Date(2021, 11),
-    tags: ["HTML", "CSS", "Wikipedia"],
+    tags: ["HTML", "CSS", "Marketing"],
     additionalTags: []
   },
   {
@@ -50,7 +51,14 @@ export const projects: PersonalProject[] = [
       "Automated trading bot that used moving average strategies to automate micro trades 24 hours a day, 7 days a week.",
     url: null,
     date: new Date(2021, 7),
-    tags: ["JavaScript", "Node.js", "Binance API", "Kraken API", "Twilio"],
+    tags: [
+      "JavaScript",
+      "Node.js",
+      "Binance API",
+      "Kraken API",
+      "Twilio",
+      "DigitalOcean"
+    ],
     additionalTags: []
   },
   {
@@ -58,7 +66,14 @@ export const projects: PersonalProject[] = [
     description: "Alarm app to prevent thieves from stealing your MacBook.",
     url: "https://neverstolen.ryanteodoro.com",
     date: new Date(2020, 2),
-    tags: ["React", "Electron.js", "Node.js", "WebSockets", "Twilio"],
-    additionalTags: ["DigitalOcean", "Twilio"]
+    tags: [
+      "React",
+      "Electron.js",
+      "Node.js",
+      "WebSockets",
+      "Twilio",
+      "DigitalOcean"
+    ],
+    additionalTags: []
   }
 ];
