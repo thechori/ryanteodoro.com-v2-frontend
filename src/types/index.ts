@@ -43,7 +43,6 @@ export interface PersonalProject {
 
 export interface Project {
   name: string;
-  date: Date | null;
   role: string;
   description: string;
   descriptionTechnical: string;
@@ -58,7 +57,7 @@ export interface Project {
   libraries: string[];
   providers: Provider[];
   accomplishments: string[];
-  badgeHighlights: string[]; // freeform - allows highlighting unique aspects of a project
+  tags: string[]; // freeform - allows highlighting unique aspects of a project
 }
 
 export type Industry =

@@ -1,13 +1,12 @@
+import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { format } from "date-fns";
 //
-// import Button from "./components/button";
 import Sidebar from "./components/sidebar";
-import { experiences } from "./data/new";
 import { Badge } from "./components/badge";
-import { projects } from "./data/projects";
 import Button from "./components/button";
-import { useState } from "react";
+import { projects } from "./data/projects";
+import { experiences } from "./data/experiences";
 
 const MAX_EXPERIENCES_TO_SHOW = 3;
 
@@ -113,9 +112,9 @@ function App() {
                     <div>{role.description}</div>
 
                     {/* projects within role */}
-                    <div>
+                    <div className="mt-2">
                       {role.projects.map((project, index) => (
-                        <div key={index} className="pl-4 mb-2">
+                        <div key={index} className="pl-4 mb-6">
                           <div className="flex items-center">
                             <div className="font-semibold pr-2">
                               {project.name}
@@ -129,7 +128,7 @@ function App() {
                           <div>{project.description}</div>
 
                           <div className="flex flex-wrap gap-2 mt-1">
-                            {project.technicalElements.map((element, index) => (
+                            {project.tags.map((element, index) => (
                               <Badge key={index}>{element}</Badge>
                             ))}
                           </div>

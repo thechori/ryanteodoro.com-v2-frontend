@@ -31,7 +31,18 @@ export const experiences: Experience[] = [
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "React",
+              "Next.js",
+              "Redux Toolkit",
+              "Node.js",
+              "Express",
+              "Postgres",
+              "DigitalOcean",
+              "Supabase",
+              "OpenAI"
+            ],
             accomplishments: [],
             technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript"],
@@ -68,7 +79,20 @@ export const experiences: Experience[] = [
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "React",
+              "Redux Toolkit",
+              "Node.js",
+              "Express",
+              "Socket.io (WebSockets)",
+              "ffmpeg",
+              "Postgres",
+              "Docker",
+              "Supabase",
+              "DigitalOcean",
+              "AWS"
+            ],
             technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript"],
             databases: ["Postgres", "Redis"],
@@ -101,7 +125,18 @@ export const experiences: Experience[] = [
             relatedLinks: [],
             deprecated: true,
             proprietary: false,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "React",
+              "Redux Toolkit",
+              "Node.js",
+              "Express",
+              "Axe Core",
+              "Postgres",
+              "Docker",
+              "Supabase",
+              "DigitalOcean"
+            ],
             technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript"],
             frameworks: ["Next.js", "Express"],
@@ -152,7 +187,19 @@ export const experiences: Experience[] = [
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "Redux",
+              "React Native",
+              "Expo",
+              "Three.js/R3F",
+              "Blender",
+              "Java",
+              "Spring",
+              "Postgres",
+              "GCP",
+              "AWS"
+            ],
             technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript", "Java", "SQL"],
             databases: ["Postgres"],
@@ -183,7 +230,19 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: true,
             proprietary: false,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "React",
+              "Twilio",
+              "Mantine",
+              "Postgres",
+              "Node.js",
+              "Express",
+              "Stripe",
+              "DigitalOcean",
+              "PHP",
+              "WordPress"
+            ],
             technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript", "SQL"],
             databases: ["Postgres"],
@@ -212,7 +271,15 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "React",
+              "Semantic UI",
+              "Redux Toolkit",
+              "GCP",
+              "Firebase",
+              "Firestore"
+            ],
             technicalElements: ["Frontend", "Backend"],
             description: "Contributed to feature development for web app.",
             descriptionTechnical: "",
@@ -273,7 +340,15 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             ],
             deprecated: false,
             proprietary: true,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "Next.js",
+              "Redux Toolkit",
+              "Python",
+              "Flask",
+              "Postgres",
+              "AWS"
+            ],
             languages: ["TypeScript", "Python"],
             databases: ["Postgres"],
             frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
@@ -288,14 +363,23 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             technicalElements: ["Frontend", "Backend"],
             role: "Frontend Tech Lead",
             description:
-              "Tech lead for the Shell Energy Insights Green Dealer initiative geared towards making it easier for customers to manage day-to-day energy needs while increasing efficiency, managing costs, and addressing decarbonization goals. Frontend built using React, TypeScript, Redux Toolkit, Styled Components.",
+              "Tech lead for the Shell Energy Insights Green Dealer initiative geared towards making it easier for customers to manage day-to-day energy needs while increasing efficiency, managing costs, and addressing decarbonization goals.",
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
             url: "https://shellenergy.com/business/energy-insights",
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "Next.js",
+              "Redux Toolkit",
+              "D3.js",
+              "Python",
+              "Flask",
+              "Postgres",
+              "AWS"
+            ],
             languages: ["TypeScript", "Python"],
             databases: ["Postgres"],
             frameworks: ["Next.js", "Flask", "Docker", "Kubernetes"],
@@ -317,7 +401,16 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: false,
             proprietary: true,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "Next.js",
+              "Redux Toolkit",
+              "D3.js",
+              "Golang",
+              "Gin",
+              "Postgres",
+              "AWS"
+            ],
             languages: ["TypeScript", "Golang"],
             databases: ["Postgres"],
             frameworks: ["Gin", "Docker", "Kubernetes"],
@@ -338,7 +431,17 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             url: "https://www.shell.com/business-customers/chemicals/doing-business-with-us/customer-portal.html",
             deprecated: false,
             proprietary: false,
-            badgeHighlights: [],
+            tags: [
+              "TypeScript",
+              "Next.js",
+              "Redux Toolkit",
+              "D3.js",
+              "Golang",
+              "GraphQL/Apollo",
+              "SAP",
+              "Postgres",
+              "AWS"
+            ],
             relatedLinks: [],
             languages: ["TypeScript", "Golang", "GraphQL"],
             databases: ["Postgres"],
@@ -361,7 +464,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
         title: "Senior Web/Mobile Developer",
         type: "Full time",
         description:
-          "Developed web and mobile applications to help with digitalization efforts for company which.",
+          "Developed web and mobile applications to support digitalization efforts.",
         startDate: new Date(2018, 0),
         endDate: new Date(2018, 11),
         achievements: [
@@ -373,14 +476,14 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             name: "Digital Service Management Application",
             technicalElements: ["Mobile", "Backend"],
             role: "Individual Contributor",
-            description: "Tablet app built to enable quick management of ",
-            descriptionTechnical:
-              "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS. Python-based predictive model was created and managed by data scientist",
+            description:
+              "iPad app to digitalize equipment service record management.",
+            descriptionTechnical: "",
             url: null,
             relatedLinks: [],
             deprecated: true,
             proprietary: true,
-            badgeHighlights: [],
+            tags: ["JavaScript", "React", "Cordova", "Redux", "SASS"],
             languages: ["JavaScript", "SQL"],
             databases: ["MySQL"],
             frameworks: ["Cordova"],
@@ -397,7 +500,13 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: true,
             proprietary: true,
-            badgeHighlights: [],
+            tags: [
+              "JavaScript",
+              "Node.js",
+              "Nodemailer",
+              "Geotab",
+              "Salesforce"
+            ],
             description:
               "Captured telemetry data from IoT devices to alert fleet drivers of infractions and promote safe driving",
             descriptionTechnical:
@@ -433,7 +542,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             relatedLinks: [],
             deprecated: true,
             proprietary: false,
-            badgeHighlights: []
+            tags: ["JavaScript", "React", "Redux", "SASS"]
           }
         ]
       }
@@ -473,7 +582,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             ],
             deprecated: true,
             proprietary: false,
-            badgeHighlights: []
+            tags: ["JavaScript", "Angular", "Ionic", "SASS"]
           },
           {
             name: "UIT Help Desk Chat Widget",
@@ -490,7 +599,26 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             databases: ["MySQL"],
             deprecated: false,
             proprietary: false,
-            badgeHighlights: [],
+            tags: ["JavaScript", "Vue", "SASS", "Webpack"],
+            providers: [],
+            accomplishments: []
+          },
+          {
+            name: "UIT Homepage",
+            role: "Individual Contributor",
+            description:
+              "Homepage for the school's Information Technology department.",
+            descriptionTechnical: "",
+            languages: ["JavaScript", "HTML", "CSS"],
+            libraries: ["Webpack"],
+            frameworks: ["Vue"],
+            technicalElements: ["Backend", "Frontend"],
+            url: "https://uh.edu/infotech/",
+            relatedLinks: [],
+            databases: ["MySQL"],
+            deprecated: false,
+            proprietary: false,
+            tags: ["PHP", "CSS", "JavaScript", "jQuery"],
             providers: [],
             accomplishments: []
           }
