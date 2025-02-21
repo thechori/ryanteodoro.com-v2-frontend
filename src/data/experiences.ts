@@ -394,7 +394,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             technicalElements: ["Frontend", "Backend"],
             role: "Tech Lead",
             description:
-              "Proprietary tool for crafting and managing high-stake deal analyses for business managers in the Shell Chemical division.",
+              "Proprietary tool for optimizing and managing high-stake deal analyses for business managers. Project delivered $38M – $57M in business value and was nominated for the VP CIO award in Shell Chemicals.",
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Golang/Gin) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
             url: null,
@@ -473,11 +473,11 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
 
         projects: [
           {
-            name: "Digital Service Management Application",
+            name: "Digital Service Management",
             technicalElements: ["Mobile", "Backend"],
             role: "Individual Contributor",
             description:
-              "iPad app to digitalize equipment service record management.",
+              "Developed iPad application for real-time equipment maintenance tracking and digital service records. Dramatically reduced service completion times and increased revenue per technician through workflow automation and paperless operations.",
             descriptionTechnical: "",
             url: null,
             relatedLinks: [],
@@ -508,7 +508,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
               "Salesforce"
             ],
             description:
-              "Captured telemetry data from IoT devices to alert fleet drivers of infractions and promote safe driving",
+              "Engineered real-time telemetry analysis system using IoT sensors to detect and alert unsafe driving patterns across the fleet. Significantly reduced traffic violations and accident rates, leading to substantial decreases in insurance premiums and liability costs.",
             descriptionTechnical:
               "Consumed historical geolocation and telemetry data from drivers to analyze driver infractions (e.g., speeding), summarize information, then send weekly emails notifying them. Integration with Salesforce was required because the third-party system API did not return data in a format that allowed for native relationships and associations between vehicles and drivers.",
             languages: ["JavaScript", "SQL"],
@@ -527,7 +527,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
           {
             name: "Company Website",
             description:
-              "Worked on the website which helped to facilitate equipment renting, used equipment sales, and order management.",
+              "Delivered full-stack rental marketplace streamlining equipment rentals, used asset sales, and order processing. Significantly increased online booking conversion rates while reducing manual order processing overhead.",
             descriptionTechnical:
               "Worked on the React frontend which used Redux for state management and SCSS/SASS for styling. Application was deployed via in-house CI/CD pipeline using Jenkins. ",
             accomplishments: [],

@@ -8,7 +8,7 @@ import Button from "./components/button";
 import { projects } from "./data/projects";
 import { experiences } from "./data/experiences";
 
-const MAX_EXPERIENCES_TO_SHOW = 4;
+const MAX_EXPERIENCES_TO_SHOW = 5;
 
 function App() {
   const [showAllExperiences, setShowAllExperiences] = useState(false);
