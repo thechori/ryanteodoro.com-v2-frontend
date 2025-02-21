@@ -20,14 +20,6 @@ export const projects: PersonalProject[] = [
     additionalTags: []
   },
   {
-    title: "mOcKcAsE",
-    description: "Created parody NPM library for obnoxious string formatting.",
-    url: "https://www.npmjs.com/package/mockcase",
-    date: new Date(2024, 11),
-    tags: ["TypeScript", "Node.js", "NPM library"],
-    additionalTags: []
-  },
-  {
     title: "Live Stream Translator",
     description:
       "Created a Python app to translate radio broadcasts from English to Spanish in real time. Accomplished by fetching live stream audio via URL, transcribing audio to text (STT), translating text from English to Spanish, then running final transform to convert text to speech (TTS). Built using fully open-source Vosk models and ran locally on local hardware. Also built a set of scripts to automate the retrieval of audio files from a website, transcribe them, then use a trained voice model to output spoken summaries using AI to save staff time on repetitive, time-consuming tasks.",
