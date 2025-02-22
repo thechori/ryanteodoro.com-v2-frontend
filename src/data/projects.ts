@@ -57,7 +57,7 @@ export const projects: PersonalProject[] = [
     title: "Never Stolen",
     description:
       "Desktop security application that protects MacBooks by monitoring critical theft indicators: lid closure, power adapter disconnection, and lost connection to remote servers. Built with Electron.js and React, the app triggers an immediate high-decibel alarm and sends SMS alerts via Twilio when suspicious activity is detected.",
-    url: "https://neverstolen.ryanteodoro.com",
+    url: "https://neverstolen.teodorosystems.com",
     date: new Date(2020, 2),
     tags: [
       "React",
