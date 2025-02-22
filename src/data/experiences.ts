@@ -25,7 +25,7 @@ export const experiences: Experience[] = [
             name: "Browser Extension",
             role: "Tech Lead",
             description:
-              "Flagship tool that enables navigation of the web using just your voice.",
+              "Flagship product that enables navigation of the web using just your voice. Think of it like Siri, but for your web browser. Powered by OpenAI's gpt4o-mini.",
             descriptionTechnical: "",
             url: "https://chromewebstore.google.com/detail/4ccessible/jfpppiodkeblpkbpilccpoalkhnpopei?pli=1",
             relatedLinks: [],
@@ -73,7 +73,7 @@ export const experiences: Experience[] = [
             name: "Stream for the Blind",
             role: "Tech Lead",
             description:
-              "Streaming platform centered around accessibility for the blind community.",
+              "Streaming platform centered around accessibility for the blind community. Partnered with BVI musicians to ensure interface was highly usable and intuitive. Architected system using AWS S3 and Cloudfront CDN to support millions of live, concurrent stream listeners using HTTP Live Streaming (HLS).",
             descriptionTechnical: "",
             url: "https://streamfortheblind.com",
             relatedLinks: [],
@@ -118,7 +118,7 @@ export const experiences: Experience[] = [
             name: "Website Accessibility Auditor",
             role: "Tech Lead",
             description:
-              "Developed tool for running comprehensive accessibility scans against URLs.",
+              "Service for running comprehensive accessibility scans against URLs using the Axe Core library. Ran service onsite using high performance hardware to avoid costly cloud infrastructure costs. Leveraged puppeteer clusters to support concurrent requests.",
             descriptionTechnical:
               "Next.js frontend was deployed to Vercel using their CI/CD pipeline and using branch merge triggers. The audit page allowed users to submit a URL which would fire off an API call to the dedicated backend service (Node.js/Express) which was hosted onsite on an old MacBook Pro via ngrok's tunneling service. This design decision was chosen because the cloud services at providers like DigitalOcean were extremely expensive for servers with powerful CPUs and GPUs which were necessary to run in-depth scans, especially in parallel when multiple scans were requested. This parallelism was made possible using clustering in the `puppeteer-cluster` NPM library. All requests and results were stored to a Postgres DB hosted via Supabase and this information was used for lead generation purposes.",
             url: null,
@@ -127,11 +127,11 @@ export const experiences: Experience[] = [
             proprietary: false,
             tags: [
               "TypeScript",
-              "React",
-              "Redux Toolkit",
               "Node.js",
               "Express",
               "Axe Core",
+              "Puppeteer",
+              "ngrok",
               "Postgres",
               "Docker",
               "Supabase",
@@ -181,7 +181,7 @@ export const experiences: Experience[] = [
             name: "Fair Worlds",
             role: "Individual Contributor",
             description:
-              "Assisted software development efforts for numerous projects.",
+              "Assisted software development efforts for numerous projects across food & beverage, accessibility, and entertainment. Extensive 3D work using libraries such as Three.js to create digital twins for retail stores.",
             descriptionTechnical: "",
             url: "https://fairworlds.com",
             relatedLinks: [],
@@ -218,7 +218,7 @@ export const experiences: Experience[] = [
             name: "EchoDial",
             role: "Tech Lead",
             description:
-              "Dialer with powerful CRM to effectively automate sales outreach efforts.",
+              "Dialer with powerful CRM to effectively automate sales outreach efforts using the Twilio SDK and APIs. Sought to disrupt the industry by implementing clever algorithms and techniques to maximize user outputs.",
             descriptionTechnical: `Led engineering team to create power dialer SaaS platform (think Google Voice + automation + CRM) built using React, TypeScript, Mantine UI, Node.js, and Postgres.
 Configured and managed external systems (e.g., AWS for S3 [storage] and SES [emails], Twilio [SMS/voice calls], Stripe [payment processing], Sentry [error logging], Amplitude [product/user analytics], BetterStack [uptime monitoring]).
 Setup Stripe for payment processing to charge customer credit cards via recurring monthly subscriptions using 3 different tiers, as well as free trials to promote user adoption.
@@ -281,7 +281,8 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
               "Firestore"
             ],
             technicalElements: ["Frontend", "Backend"],
-            description: "Contributed to feature development for web app.",
+            description:
+              "Contributed to frontend development for web app using libraries such as Semantic UI. Developed and debugged serverless functions using Google Cloud Run which managed data within Cloud Firestore.",
             descriptionTechnical: "",
             languages: ["TypeScript"],
             databases: [],
@@ -329,8 +330,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             technicalElements: ["Frontend", "Backend"],
             role: "Frontend Tech Lead",
             description:
-              "Establish the single source of truth for all the formulation and testing data held within Shell.",
-            // "Platform to centralize fragmented, unstructured, and multilingual lab results to train models for crafting new lubricants at unprecedented speeds and budgets.",
+              "Consolidated lubricant and fuel formulation data into a single repository, enabling effective data retrieval and the training of predictive AI models. This dual benefit of centralized data and AI-powered predictions significantly reduced product development time and testing costs, while freeing teams to focus on innovation rather than searching through scattered information or conducting unnecessary experiments.",
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS. Python-based predictive model was created and managed by data scientist",
             url: null,
@@ -363,7 +363,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             technicalElements: ["Frontend", "Backend"],
             role: "Frontend Tech Lead",
             description:
-              "Tech lead for the Shell Energy Insights Green Dealer initiative, helping customers manage energy needs, improve efficiency, reduce costs, and meet decarbonization goals.",
+              "Digital platform which helped customers manage energy needs, improve facility efficiency, reduce costs, and meet decarbonization goals.",
             descriptionTechnical:
               "The frontend (React/Node.js) and backend (Python/Flask) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team. Postgres DB via AWS RDS.",
             url: "https://shellenergy.com/business/energy-insights",
@@ -425,10 +425,10 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             role: "Individual Contributor",
             technicalElements: ["Frontend", "Backend"],
             description:
-              "Dashboard for tracking large shipments in real time for the Global Commercial business.",
+              "Real-time web dashboard for monitoring enterprise-scale lubricant shipments by integrating SAP data through a GraphQL API, enabling Shell's commercial customers to track their orders seamlessly.",
             descriptionTechnical:
               "Project integrated with SAP to provide Shell partners with real-time lubricant delivery data. The frontend (React/Node.js) and backend (Golang/GraphQL) were both containerized in Docker and then deployed to Kubernetes clusters running in AWS managed by the dedicated platform team.",
-            url: "https://www.shell.com/business-customers/chemicals/doing-business-with-us/customer-portal.html",
+            url: null,
             deprecated: false,
             proprietary: false,
             tags: [
@@ -565,7 +565,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
           {
             name: "UH Redline",
             description:
-              "Mobile app for the university, used by students, faculty, and guests of the school.",
+              "Primary mobile app for the university, used daily by thousands of students, faculty, staff, and visitors of the school. Built using Angular/Ionic and integrated with a PHP backend API.",
             descriptionTechnical:
               "Built using Angular and the Ionic mobile framework for cross-platform development. Backend API was written in PHP and run onsite at the university's data center.",
             databases: ["MySQL"],
@@ -588,7 +588,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             name: "UIT Help Desk Chat Widget",
             role: "Tech Lead",
             description:
-              "Widget that could be included on any UH website which would allow users to easily connect to and chat with support agents.",
+              "Website widget that could be included on any UH website which would allow users to easily connect to and chat with Help Desk support agents. Built using Vue and WebSockets.",
             descriptionTechnical: "",
             languages: ["JavaScript", "HTML", "CSS"],
             libraries: ["Webpack"],
@@ -599,7 +599,13 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             databases: ["MySQL"],
             deprecated: false,
             proprietary: false,
-            tags: ["JavaScript", "Vue", "SASS", "Webpack"],
+            tags: [
+              "JavaScript",
+              "Vue",
+              "Socket.io (WebSockets)",
+              "SASS",
+              "Webpack"
+            ],
             providers: [],
             accomplishments: []
           },
@@ -607,7 +613,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             name: "UIT Homepage",
             role: "Individual Contributor",
             description:
-              "Homepage for the school's Information Technology department.",
+              "Homepage for the school's Information Technology department. Used every day by students, faculty, staff, and visitors to access important information and services. Built using PHP, MySQL, jQuery, and vanilla CSS.",
             descriptionTechnical: "",
             languages: ["JavaScript", "HTML", "CSS"],
             libraries: ["Webpack"],
@@ -618,7 +624,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             databases: ["MySQL"],
             deprecated: false,
             proprietary: false,
-            tags: ["PHP", "CSS", "JavaScript", "jQuery"],
+            tags: ["PHP", "MySQL", "CSS", "JavaScript", "jQuery"],
             providers: [],
             accomplishments: []
           }
