@@ -21,10 +21,9 @@ function App() {
         <section id="about" className="mb-20">
           <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">about</h2>
           <p className="mb-3">
-            I'm a 3D animator turned software engineer/entrepreneur with a
-            passion for solving interesting problems and creating digital media.
-            My favorite work is found at the intersection of cutting-edge
-            technology,{" "}
+            I'm a software engineer and entrepreneur with a passion for solving
+            interesting problems and creating digital media. My favorite work is
+            found at the intersection of cutting-edge technology,{" "}
             <a
               href="https://medium.com/workleap/pragmatic-software-development-59d12790e422"
               target="_blank"
@@ -33,26 +32,28 @@ function App() {
             </a>
             , and great user experiences that are highly useful and intuitive.
           </p>
-          <p>
-            Currently, I'm founder and CEO at{" "}
+
+          <p className="mb-3">
+            I founded{" "}
+            <a href="https://teodorosystems.com" target="_blank">
+              Teodoro Systems
+            </a>
+            {", "}a software consulting firm that develops solutions for clients
+            that include Fortune 500 companies, YC-backed startups, digital
+            agencies, non-profits, and so much more.
+          </p>
+
+          <p className="mb-3">
+            We also support a portfolio of internal ventures such as{" "}
             <a href="https://4ccessible.com" target="_blank">
               4ccessible
             </a>{" "}
-            where I specialize in the application of AI in the context of
-            digital accessibility. My startup was accepted into the Tokyo
-            startup centers at Google and Amazon and was recently announced as
-            an Innovation Award finalist for SXSW 2025.
+            where I hold the position of CEO and I specialize in the application
+            of AI in the context of digital accessibility. My startup was
+            accepted into the Tokyo startup centers at Google and Amazon and was
+            recently announced as an Innovation Award finalist for SXSW 2025.
           </p>
-          <p className="mb-3"></p>
-          <p className="mb-3">
-            I also run{" "}
-            <a href="https://teodorosystems.com" target="_blank">
-              a small software consultancy
-            </a>{" "}
-            where I've had the opportunity to develop software for Fortune 500
-            companies, YC-backed startups, digital agencies, non-profits, and so
-            much more.
-          </p>
+
           <p className="mb-3">
             In my spare time, you'll find me in coffee shops hacking on{" "}
             <a href="#projects">my side projects</a> (and telling the poor

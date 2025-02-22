@@ -181,7 +181,7 @@ export const experiences: Experience[] = [
             name: "Fair Worlds",
             role: "Individual Contributor",
             description:
-              "Assisted software development efforts for numerous projects across food & beverage, accessibility, and entertainment. Extensive 3D work using libraries such as Three.js to create digital twins for retail stores.",
+              "Developed software solutions across food & beverage, accessibility, and entertainment sectors, specializing in creating digital twins for retail stores and home improvement spaces using Three.js and related 3D technologies.",
             descriptionTechnical: "",
             url: "https://fairworlds.com",
             relatedLinks: [],
@@ -218,7 +218,7 @@ export const experiences: Experience[] = [
             name: "EchoDial",
             role: "Tech Lead",
             description:
-              "Dialer with powerful CRM to effectively automate sales outreach efforts using the Twilio SDK and APIs. Sought to disrupt the industry by implementing clever algorithms and techniques to maximize user outputs.",
+              "Built an automated sales outreach platform powered by Twilio's SDK and APIs, implementing performance optimization algorithms to maximize call center efficiency and user productivity.",
             descriptionTechnical: `Led engineering team to create power dialer SaaS platform (think Google Voice + automation + CRM) built using React, TypeScript, Mantine UI, Node.js, and Postgres.
 Configured and managed external systems (e.g., AWS for S3 [storage] and SES [emails], Twilio [SMS/voice calls], Stripe [payment processing], Sentry [error logging], Amplitude [product/user analytics], BetterStack [uptime monitoring]).
 Setup Stripe for payment processing to charge customer credit cards via recurring monthly subscriptions using 3 different tiers, as well as free trials to promote user adoption.
@@ -282,7 +282,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
             ],
             technicalElements: ["Frontend", "Backend"],
             description:
-              "Contributed to frontend development for web app using libraries such as Semantic UI. Developed and debugged serverless functions using Google Cloud Run which managed data within Cloud Firestore.",
+              "Platform that provides critical financial infrastructure by streamlining the management of SPV entities, enabling efficient project financing and portfolio analytics through a web platform built on Google Cloud Run and Firestore. I contributed to building frontend components and serverless functions that help companies manage their complex entity structures effectively.",
             descriptionTechnical: "",
             languages: ["TypeScript"],
             databases: [],
