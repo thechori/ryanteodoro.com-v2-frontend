@@ -38,9 +38,9 @@ export const projects: PersonalProject[] = [
     additionalTags: []
   },
   {
-    title: "Crypto Trading Bot",
+    title: "Cryptocurrency Trading Bot",
     description:
-      "Automated trading bot that used moving average strategies to automate micro trades 24 hours a day, 7 days a week.",
+      "Engineered a 24/7 automated cryptocurrency trading bot that consumed real-time market data from Binance API while executing trades through Kraken's order execution API. The system implemented moving average crossover strategies for trade decisions and kept investors informed through automated Twilio SMS notifications.",
     url: null,
     date: new Date(2021, 7),
     tags: [
@@ -55,7 +55,8 @@ export const projects: PersonalProject[] = [
   },
   {
     title: "Never Stolen",
-    description: "Alarm app to prevent thieves from stealing your MacBook.",
+    description:
+      "Desktop security application that protects MacBooks by monitoring critical theft indicators: lid closure, power adapter disconnection, and lost connection to remote servers. Built with Electron.js and React, the app triggers an immediate high-decibel alarm and sends SMS alerts via Twilio when suspicious activity is detected.",
     url: "https://neverstolen.ryanteodoro.com",
     date: new Date(2020, 2),
     tags: [
