@@ -34,24 +34,25 @@ function App() {
           </p>
 
           <p className="mb-3">
-            I founded{" "}
-            <a href="https://teodorosystems.com" target="_blank">
-              Teodoro Systems
-            </a>
-            {", "}a software consulting firm that develops solutions for clients
-            that include Fortune 500 companies, YC-backed startups, digital
-            agencies, non-profits, and so much more.
-          </p>
-
-          <p className="mb-3">
-            We also support a portfolio of internal ventures such as{" "}
+            I'm currently founder and CEO at{" "}
             <a href="https://4ccessible.com" target="_blank">
               4ccessible
             </a>{" "}
-            where I hold the position of CEO and I specialize in the application
-            of AI in the context of digital accessibility. My startup was
-            accepted into the Tokyo startup centers at Google and Amazon and was
-            recently announced as an Innovation Award finalist for SXSW 2025.
+            where I specialize in the application of AI in the context of
+            digital accessibility. We are members of the Google and AWS startup
+            centers in Tokyo and were recently nominated as a SXSW 2025
+            Innovation Award finalist for our impact in Community Empowerment.
+          </p>
+
+          <p className="mb-3">
+            I also run{" "}
+            <a href="https://teodorosystems.com" target="_blank">
+              Teodoro Systems
+            </a>
+            {", "}a technology consulting firm that develops solutions for
+            clients including Fortune 500 companies, YC-backed startups, digital
+            agencies, non-profits, and many more. We also support a number of
+            internal ventures such as 4ccessible.
           </p>
 
           <p className="mb-3">
@@ -67,8 +68,8 @@ function App() {
               target="_blank"
             >
               Lone Star Drift
-            </a>
-            , or playing tennis with friends.
+            </a>{" "}
+            track events, or playing tennis with friends.
           </p>
         </section>
 
