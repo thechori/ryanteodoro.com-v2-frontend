@@ -100,7 +100,7 @@ function App() {
                 {/* roles within experience */}
                 {experience.roles.map((role, index) => (
                   <div key={index}>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between mb-1">
                       <div className="italic text-sm md:text-base">
                         {role.title}
                       </div>
@@ -131,7 +131,7 @@ function App() {
                           </div>
                           <div>{project.description}</div>
 
-                          <div className="flex flex-wrap gap-2 mt-1">
+                          <div className="flex flex-wrap gap-2 mt-2">
                             {project.tags.map((element, index) => (
                               <Badge key={index}>{element}</Badge>
                             ))}
@@ -174,14 +174,9 @@ function App() {
               </div>
 
               <div>{project.description}</div>
-              <div className="mt-1">
+              <div className="flex flex-wrap gap-2 mt-2">
                 {project.tags?.map((skill, index) => (
-                  <div
-                    key={index}
-                    className="text-white bg-teal-600 inline px-2 py-1 rounded-md text-sm mr-2"
-                  >
-                    {skill}
-                  </div>
+                  <Badge key={index}>{skill}</Badge>
                 ))}
               </div>
             </div>
