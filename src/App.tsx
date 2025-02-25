@@ -101,12 +101,14 @@ function App() {
                 {experience.roles.map((role, index) => (
                   <div key={index}>
                     <div className="flex justify-between">
-                      <div className="italic">{role.title}</div>
+                      <div className="italic text-sm md:text-base">
+                        {role.title}
+                      </div>
                       {role.startDate && (
-                        <div className="font-semibold text-teal-600">
-                          {format(role.startDate, "MMM yyyy")} -{" "}
+                        <div className="font-semibold text-teal-600 text-sm md:text-base">
+                          {format(role.startDate, "MM/yyyy")} -{" "}
                           {role.endDate
-                            ? format(role.endDate, "MMM yyyy")
+                            ? format(role.endDate, "MM/yyyy")
                             : "Present"}
                         </div>
                       )}
@@ -167,7 +169,7 @@ function App() {
                 </div>
 
                 <div className="font-semibold text-teal-600">
-                  {format(project.date, "MMM yyyy")}
+                  {format(project.date, "MM/yyyy")}
                 </div>
               </div>
 
