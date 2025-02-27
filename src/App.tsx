@@ -18,7 +18,7 @@ function App() {
       <Sidebar />
 
       <div className="flex-1 w-full pr-4">
-        <section id="about" className="mb-20">
+        <section id="about" className="mb-10 sm:mb-12 md:mb-20">
           <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">about</h2>
           <p className="mb-3">
             I'm a software engineer and entrepreneur with a passion for solving
@@ -73,7 +73,7 @@ function App() {
           </p>
         </section>
 
-        <section id="experience" className="mb-20">
+        <section id="experience" className="mb-10 sm:mb-12 md:mb-20">
           <h2 className="text-3xl font-bold mb-4 3b-1 border-b-2">
             experience
           </h2>
@@ -85,13 +85,17 @@ function App() {
             )
             .map((experience, index) => (
               <div key={index} className="mb-10">
-                <div className="flex items-center">
-                  <div className="font-bold text-xl mr-2">
+                <div className="inline-block items-center">
+                  <span className="font-bold text-xl mr-2">
                     {experience.company}
-                  </div>
+                  </span>
 
                   {experience.url && (
-                    <a href={experience.url} target="_blank">
+                    <a
+                      className="inline-block relative top-1"
+                      href={experience.url}
+                      target="_blank"
+                    >
                       <ExternalLink size={24} />
                     </a>
                   )}
@@ -154,15 +158,19 @@ function App() {
           )}
         </section>
 
-        <section id="projects" className="mb-20">
+        <section id="projects" className="mb-10 sm:mb-12 md:mb-20">
           <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">projects</h2>
           {projects.map((project, index) => (
             <div key={index} className="mb-6">
-              <div className="flex justify-between">
-                <div className="flex">
-                  <div className="font-semibold pr-1">{project.title}</div>
+              <div className="flex justify-between items-center mb-1">
+                <div className="flex items-center">
+                  <div className="font-semibold pr-2">{project.title}</div>
                   {project.url && (
-                    <a href={project.url} target="_blank">
+                    <a
+                      className="relative bottom-0.5"
+                      href={project.url}
+                      target="_blank"
+                    >
                       <ExternalLink />
                     </a>
                   )}
@@ -185,7 +193,7 @@ function App() {
           {/* <Button title="see all projects" className="my-2" variant="outline" /> */}
         </section>
 
-        <section id="experience" className="mb-20">
+        <section id="experience" className="mb-10 sm:mb-12 md:mb-20">
           <h2 className="text-3xl font-bold mb-4 3b-1 border-b-2">education</h2>
 
           <div className="mb-4">

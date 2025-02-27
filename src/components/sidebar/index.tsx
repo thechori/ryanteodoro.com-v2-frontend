@@ -32,7 +32,7 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-full sm:w-[350px] md:w-[400px]">
+    <div className="w-full sm:w-[325px] md:w-[350px] lg:w-[400px]">
       <div>
         <img
           width="200px"
@@ -40,7 +40,7 @@ const Sidebar = () => {
           alt="headshot of ryan teodoro with blue background"
           className="w:[50px] rounded-full py-4"
         />
-        <h1 className="text-5xl md:text-6xl bg-font mb-2 font-bold">
+        <h1 className="text-5xl lg:text-6xl bg-font mb-2 font-bold">
           ryan teodoro
         </h1>
         <div className="text-xl">founder, senior software engineer</div>
