@@ -464,7 +464,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
         title: "Senior Web/Mobile Developer",
         type: "Full time",
         description:
-          "Developed web and mobile applications to support digitalization efforts.",
+          "Developed web and mobile applications to support digitalization efforts that led to a $2.1 billion exit.",
         startDate: new Date(2018, 0),
         endDate: new Date(2018, 11),
         achievements: [
