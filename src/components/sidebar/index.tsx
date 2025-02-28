@@ -11,7 +11,7 @@ const items = [
   },
   {
     name: "linkedin",
-    url: "https://www.linkedin.com/in/ryan-teodoro-34635761/",
+    url: "https://www.linkedin.com/in/ryanteodoro",
     icon: <Linkedin />
   },
   {
