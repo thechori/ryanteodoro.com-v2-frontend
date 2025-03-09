@@ -41,7 +41,8 @@ function App() {
             where I specialize in the application of AI in the context of
             digital accessibility. We are members of the Google and AWS startup
             centers in Tokyo and were recently nominated as a SXSW 2025
-            Innovation Award finalist for our impact in Community Empowerment.
+            Innovation Award finalist (alt) for our impact in Community
+            Empowerment.
           </p>
 
           <p className="mb-3">
