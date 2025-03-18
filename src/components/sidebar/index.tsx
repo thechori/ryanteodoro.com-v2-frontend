@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 //
 import ModeToggle from "../mode-toggle";
 import Button from "../button";
@@ -18,11 +18,6 @@ const items = [
     name: "github",
     url: "https://github.com/thechori",
     icon: <Github />
-  },
-  {
-    name: "instagram",
-    url: "https://instagram.com/theryanteodoro",
-    icon: <Instagram />
   }
 ];
 
