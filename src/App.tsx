@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { format } from "date-fns";
+import _ from "lodash";
 //
 import Sidebar from "./components/sidebar";
 import { Badge } from "./components/badge";
@@ -41,8 +42,7 @@ function App() {
             where I specialize in the application of AI in the context of
             digital accessibility. We are members of the Google and AWS startup
             centers in Tokyo and were recently nominated as a SXSW 2025
-            Innovation Award finalist (alt) for our impact in Community
-            Empowerment.
+            Innovation Award finalist for our impact in Community Empowerment.
           </p>
 
           <p className="mb-3">
@@ -87,7 +87,7 @@ function App() {
             .map((experience, index) => (
               <div key={index} className="mb-10">
                 <div className="inline-block items-center">
-                  <span className="font-bold text-xl mr-2">
+                  <span className="font-bold text-2xl mr-2">
                     {experience.company}
                   </span>
 
@@ -121,28 +121,40 @@ function App() {
                     <div>{role.description}</div>
 
                     {/* projects within role */}
-                    <div className="mt-2">
-                      {role.projects.map((project, index) => (
-                        <div key={index} className="pl-4 mb-6">
-                          <div className="flex items-center">
-                            <div className="font-semibold pr-2">
-                              {project.name}
-                            </div>
-                            {project.url && (
-                              <a href={project.url} target="_blank">
-                                <ExternalLink size={18} />
-                              </a>
-                            )}
-                          </div>
-                          <div>{project.description}</div>
-
-                          <div className="flex flex-wrap gap-2 mt-2">
-                            {project.tags.map((element, index) => (
-                              <Badge key={index}>{element}</Badge>
-                            ))}
-                          </div>
+                    <div className="mt-2 flex">
+                      <div className="relative w-24 bg-gray-100 text-gray-300 overflow-hidden">
+                        <div
+                          className="flex absolute top-1/2 left-1/2 
+             transform -translate-x-1/2 -translate-y-1/2 rotate-90"
+                        >
+                          {_.times(20, () => (
+                            <div className="px-10">projects</div>
+                          ))}
                         </div>
-                      ))}
+                      </div>
+                      <div>
+                        {role.projects.map((project, index) => (
+                          <div key={index} className="pl-4 mb-6">
+                            <div className="flex items-center">
+                              <div className="font-semibold opacity-80 pr-2">
+                                {project.name}
+                              </div>
+                              {project.url && (
+                                <a href={project.url} target="_blank">
+                                  <ExternalLink size={18} />
+                                </a>
+                              )}
+                            </div>
+                            <div>{project.description}</div>
+
+                            <div className="flex flex-wrap gap-2 mt-2">
+                              {project.tags.map((element, index) => (
+                                <Badge key={index}>{element}</Badge>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ))}
