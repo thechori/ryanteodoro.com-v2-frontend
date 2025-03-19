@@ -34,7 +34,6 @@ export const experiences: Experience[] = [
             tags: [
               "TypeScript",
               "React",
-              "Next.js",
               "Redux Toolkit",
               "Node.js",
               "Express",
@@ -70,50 +69,54 @@ export const experiences: Experience[] = [
             ]
           },
           {
-            name: "Stream for the Blind",
+            name: "Marketing Website",
             role: "Tech Lead",
             description:
-              "Streaming platform centered around accessibility for the blind community. Partnered with BVI musicians to ensure interface was highly usable and intuitive. Architected system using AWS S3 and Cloudfront CDN to support millions of live, concurrent stream listeners using HTTP Live Streaming (HLS).",
+              "Web application which serves as the landing page for new customers and the portal for manage account related activities (e.g., purchasing additional credits, closing accounts, etc).",
             descriptionTechnical: "",
-            url: "https://streamfortheblind.com",
+            url: "https://4ccessible.com",
             relatedLinks: [],
             deprecated: false,
             proprietary: false,
             tags: [
               "TypeScript",
               "React",
+              "Next.js",
+              "Material UI",
               "Redux Toolkit",
               "Node.js",
               "Express",
-              "Socket.io (WebSockets)",
-              "ffmpeg",
               "Postgres",
-              "Docker",
-              "Supabase",
               "DigitalOcean",
-              "AWS"
+              "Supabase"
             ],
+            accomplishments: [],
             technicalElements: ["Frontend", "Backend"],
             languages: ["TypeScript"],
-            databases: ["Postgres", "Redis"],
-            frameworks: [],
-            libraries: ["React", "ffmpeg"],
-            accomplishments: [],
+            frameworks: ["Express"],
+            databases: ["Postgres"],
+            libraries: ["React", "Redux Toolkit"],
             providers: [
               {
-                name: "AWS",
-                services: ["S3"]
+                name: "DigitalOcean",
+                services: ["Apps", "Storage"]
               },
               {
                 name: "Supabase",
-                services: ["Auth", "Database"]
+                services: ["Database", "Auth"]
+              },
+
+              {
+                name: "OpenAI",
+                services: ["Chat Completions"]
               },
               {
-                name: "DigitalOcean",
-                services: ["App"]
+                name: "Stripe",
+                services: ["Billing"]
               }
             ]
           },
+
           {
             name: "Website Accessibility Auditor",
             role: "Tech Lead",
@@ -213,6 +216,51 @@ export const experiences: Experience[] = [
               }
             ],
             accomplishments: []
+          },
+          {
+            name: "Stream for the Blind",
+            role: "Tech Lead",
+            description:
+              "Streaming platform centered around accessibility for the blind community. Partnered with BVI musicians to ensure interface was highly usable and intuitive. Architected system using AWS S3 and Cloudfront CDN to support millions of live, concurrent stream listeners using HTTP Live Streaming (HLS).",
+            descriptionTechnical: "",
+            url: "https://streamfortheblind.com",
+            relatedLinks: [],
+            deprecated: false,
+            proprietary: false,
+            tags: [
+              "TypeScript",
+              "React",
+              "Redux Toolkit",
+              "Node.js",
+              "Express",
+              "Socket.io (WebSockets)",
+              "ffmpeg",
+              "Postgres",
+              "Docker",
+              "Supabase",
+              "DigitalOcean",
+              "AWS"
+            ],
+            technicalElements: ["Frontend", "Backend"],
+            languages: ["TypeScript"],
+            databases: ["Postgres", "Redis"],
+            frameworks: [],
+            libraries: ["React", "ffmpeg"],
+            accomplishments: [],
+            providers: [
+              {
+                name: "AWS",
+                services: ["S3"]
+              },
+              {
+                name: "Supabase",
+                services: ["Auth", "Database"]
+              },
+              {
+                name: "DigitalOcean",
+                services: ["App"]
+              }
+            ]
           },
           {
             name: "EchoDial",
