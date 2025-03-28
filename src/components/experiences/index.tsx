@@ -42,7 +42,7 @@ const Experiences = () => {
             {/* roles within experience */}
             {experience.roles.map((role, index) => (
               <div key={index}>
-                <div className="flex  mb-1">
+                <div className="flex pb-1">
                   <div className="opacity-70 italic md:text-base">
                     {role.title}, {format(role.startDate, "MM/yyyy")} -{" "}
                     {role.endDate ? format(role.endDate, "MM/yyyy") : "Present"}
@@ -71,7 +71,7 @@ const Experiences = () => {
                       </div>
                       <div>{project.description}</div>
 
-                      <div className="flex flex-wrap gap-2 mt-2 pb-2">
+                      <div className="flex flex-wrap gap-2 my-2">
                         {project.tags.map((element, index) => (
                           <Badge variant="outlineSecondary" key={index}>
                             {element}
