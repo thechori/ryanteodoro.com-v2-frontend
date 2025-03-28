@@ -71,7 +71,7 @@ const Experiences = () => {
                       </div>
                       <div>{project.description}</div>
 
-                      <div className="flex flex-wrap gap-2 mt-2">
+                      <div className="flex flex-wrap gap-2 mt-2 pb-2">
                         {project.tags.map((element, index) => (
                           <Badge variant="outlineSecondary" key={index}>
                             {element}
