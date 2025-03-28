@@ -43,7 +43,7 @@ const Experiences = () => {
             {experience.roles.map((role, index) => (
               <div key={index}>
                 <div className="flex  mb-1">
-                  <div className="opacity-70 italic text-sm md:text-base">
+                  <div className="opacity-70 italic md:text-base">
                     {role.title}, {format(role.startDate, "MM/yyyy")} -{" "}
                     {role.endDate ? format(role.endDate, "MM/yyyy") : "Present"}
                   </div>

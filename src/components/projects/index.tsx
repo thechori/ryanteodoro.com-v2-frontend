@@ -7,9 +7,10 @@ import { projects } from "../../data/projects";
 const Projects = () => (
   <section id="projects" className="mb-10 sm:mb-12 md:mb-20">
     <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">projects</h2>
-    {projects.map((project, index) => (
-      <div key={index} className="mb-6">
-        <div className="flex justify-between items-center mb-1">
+
+    <div className="flex flex-col gap-5">
+      {projects.map((project, index) => (
+        <div key={index} className="mb-6">
           <div className="flex items-center">
             <div className="font-semibold pr-2">{project.title}</div>
             {project.url && (
@@ -22,24 +23,21 @@ const Projects = () => (
               </a>
             )}
           </div>
+          <div className="italic opacity-70 pb-1">
+            {format(project.date, "MMMM yyyy")}
+          </div>
 
-          <div className="font-semibold text-teal-600">
-            {format(project.date, "MM/yyyy")}
+          <div>{project.description}</div>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {project.tags?.map((skill, index) => (
+              <Badge variant="outlineSecondary" key={index}>
+                {skill}
+              </Badge>
+            ))}
           </div>
         </div>
-
-        <div>{project.description}</div>
-        <div className="flex flex-wrap gap-2 mt-2">
-          {project.tags?.map((skill, index) => (
-            <Badge variant="outlineSecondary" key={index}>
-              {skill}
-            </Badge>
-          ))}
-        </div>
-      </div>
-    ))}
-
-    {/* <Button title="see all projects" className="my-2" variant="outline" /> */}
+      ))}
+    </div>
   </section>
 );
 
