@@ -51,15 +51,15 @@ const Experiences = () => {
                 <div>{role.description}</div>
 
                 {/* projects within role */}
-                <div className="flex flex-col mt-2 pl-4 gap-10">
+                <div className="flex flex-col mt-3 pl-0 gap-10">
                   {role.projects.map((project, index) => (
                     <div
                       key={index}
-                      className="border-l-[12px] border-teal-500 pl-3"
+                      className="border-l-[12px] border-teal-500 pl-3 py-0"
                     >
                       <div className="flex items-center">
                         <div>
-                          <div className="font-semibold pr-2">
+                          <div className="font-semibold pr-2 leading-none">
                             {project.name}
                           </div>
                         </div>
@@ -71,7 +71,7 @@ const Experiences = () => {
                       </div>
                       <div>{project.description}</div>
 
-                      <div className="flex flex-wrap gap-2 my-2">
+                      <div className="flex flex-wrap gap-2 mt-2">
                         {project.tags.map((element, index) => (
                           <Badge variant="outlineSecondary" key={index}>
                             {element}

@@ -12,7 +12,7 @@ const Projects = () => (
       {projects.map((project, index) => (
         <div key={index} className="mb-6">
           <div className="flex items-center">
-            <div className="font-semibold pr-2">{project.title}</div>
+            <div className="font-bold text-2xl pr-2">{project.title}</div>
             {project.url && (
               <a
                 className="relative bottom-0.5"
