@@ -9,7 +9,7 @@ export interface Experience {
 export interface Role {
   title: string;
   type: "Full time" | "Part time" | "Contract" | "Internship" | "Founder";
-  startDate: Date | null;
+  startDate: Date;
   endDate: Date | null;
   achievements: string[];
   projects: Project[];

@@ -13,7 +13,8 @@ const badgeVariants = cva(
         secondary: "bg-orange-400",
         tertiary: "bg-green-400",
         destructive: "bg-red-500 text-white ",
-        outline: "border-blue-500 text-blue-500"
+        outline: "border-blue-500 text-blue-500",
+        outlineSecondary: "border-teal-600 text-teal-600"
       },
       size: {
         sm: "px-2 py-0.5 text-xs",

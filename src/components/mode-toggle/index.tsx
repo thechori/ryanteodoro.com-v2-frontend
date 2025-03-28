@@ -33,7 +33,7 @@ export default function ModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-4 right-4 p-2 rounded-lg bg-gray-200 text-yellow-500 dark:text-purple-300 dark:bg-gray-700 hover:opacity-50 transition-all hover:cursor-pointer"
+      className="fixed top-4 right-4 p-2 border-2 rounded-lg bg-gray-200 text-yellow-500 dark:text-purple-300 dark:bg-gray-700 hover:opacity-50 transition-all hover:cursor-pointer"
       aria-label="Toggle theme"
     >
       {theme === "light" ? <Sun /> : <Moon />}
