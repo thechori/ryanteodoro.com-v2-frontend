@@ -6,7 +6,7 @@ const Education = () => (
 
     <div className="mb-4">
       <div className="">
-        <div className="font-semibold pr-1">
+        <div className="font-bold text-2xl pr-1">
           University of Houston - Victoria
         </div>
         <div className="opacity-70 italic pb-1">May 2013</div>
