@@ -1,6 +1,6 @@
 const Footer = () => (
   <section id="footer">
-    <p className="mt-20 text-slate-400">
+    <p className="mt-20 text-slate-400 pb-4">
       This website was created by yours truly. If you'd like to see the source
       code, you can check it out{" "}
       <a
