@@ -2,7 +2,7 @@ import { Badge } from "../../components/badge";
 
 const Education = () => (
   <section id="education" className="mb-10 sm:mb-12 md:mb-20">
-    <h2 className="text-3xl font-bold mb-4 3b-1 border-b-2">education</h2>
+    <h2>education</h2>
 
     <div className="mb-4">
       <div className="">

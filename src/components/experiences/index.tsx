@@ -14,7 +14,7 @@ const Experiences = () => {
 
   return (
     <section id="experience" className="mb-10 sm:mb-12 md:mb-20">
-      <h2 className="text-3xl font-bold mb-4 3b-1 border-b-2">experience</h2>
+      <h2>experience</h2>
 
       {/* companies */}
       {experiences

@@ -6,7 +6,7 @@ import { projects } from "../../data/projects";
 
 const Projects = () => (
   <section id="projects" className="mb-10 sm:mb-12 md:mb-20">
-    <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">projects</h2>
+    <h2>projects</h2>
 
     <div className="flex flex-col gap-5">
       {projects.map((project, index) => (

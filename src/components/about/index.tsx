@@ -1,6 +1,6 @@
 const About = () => (
   <section id="about" className="mb-10 sm:mb-12 md:mb-20">
-    <h2 className="text-3xl font-bold mb-3 pb-1 border-b-2">about</h2>
+    <h2>about</h2>
     <p className="mb-3">
       I'm a software engineer and entrepreneur with a passion for solving
       interesting problems and creating digital media. My favorite work is found
