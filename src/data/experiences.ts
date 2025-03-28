@@ -608,7 +608,8 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
         endDate: new Date(2017, 11),
         type: "Contract",
         achievements: [],
-        description: "",
+        description:
+          "Consulted with university to drive development of high visibility initiatives.",
         projects: [
           {
             name: "UH Redline",

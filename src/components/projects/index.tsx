@@ -31,7 +31,9 @@ const Projects = () => (
         <div>{project.description}</div>
         <div className="flex flex-wrap gap-2 mt-2">
           {project.tags?.map((skill, index) => (
-            <Badge key={index}>{skill}</Badge>
+            <Badge variant="outlineSecondary" key={index}>
+              {skill}
+            </Badge>
           ))}
         </div>
       </div>

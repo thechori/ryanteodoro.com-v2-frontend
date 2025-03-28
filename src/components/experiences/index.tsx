@@ -90,7 +90,7 @@ const Experiences = () => {
         <Button
           title="see all experiences"
           className="my-2"
-          variant="outline"
+          variant="outlineSecondary"
           onClick={() => setShowAllExperiences(true)}
         />
       )}

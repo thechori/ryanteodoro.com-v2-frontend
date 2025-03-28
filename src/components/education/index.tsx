@@ -17,7 +17,9 @@ const Education = () => (
       <div className="flex flex-wrap gap-2 mt-1">
         {["Graduated Cum Laude (3.52 GPA)", "Dean's List recipient"].map(
           (element, index) => (
-            <Badge key={index}>{element}</Badge>
+            <Badge key={index} variant="outlineSecondary">
+              {element}
+            </Badge>
           )
         )}
       </div>
