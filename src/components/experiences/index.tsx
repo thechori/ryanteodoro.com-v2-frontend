@@ -1,16 +1,16 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { format } from "date-fns";
 import _ from "lodash";
 //
-import Button from "../../components/button";
+// import Button from "../../components/button";
 import { Badge } from "../../components/badge";
 import { experiences } from "../../data/experiences";
 
-const MAX_EXPERIENCES_TO_SHOW = 5;
+// const MAX_EXPERIENCES_TO_SHOW = 5;
 
 const Experiences = () => {
-  const [showAllExperiences, setShowAllExperiences] = useState(false);
+  // const [showAllExperiences, setShowAllExperiences] = useState(false);
 
   return (
     <section id="experience" className="mb-10 sm:mb-12 md:mb-20">
@@ -18,9 +18,9 @@ const Experiences = () => {
 
       {/* companies */}
       {experiences
-        .filter((_, index) =>
-          showAllExperiences ? true : index < MAX_EXPERIENCES_TO_SHOW
-        )
+        // .filter((_, index) =>
+        // showAllExperiences ? true : index < MAX_EXPERIENCES_TO_SHOW
+        // )
         .map((experience, index) => (
           <div key={index} className="mb-10">
             <div className="inline-block items-center">
@@ -86,14 +86,13 @@ const Experiences = () => {
           </div>
         ))}
 
-      {!showAllExperiences && (
+      {/* {!showAllExperiences && (
         <Button
           title="see all experiences"
           className="my-2"
-          variant="outlineSecondary"
           onClick={() => setShowAllExperiences(true)}
         />
-      )}
+      )} */}
     </section>
   );
 };
