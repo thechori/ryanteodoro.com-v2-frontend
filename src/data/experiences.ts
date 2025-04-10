@@ -72,7 +72,7 @@ export const experiences: Experience[] = [
             name: "Marketing Website",
             role: "Tech Lead",
             description:
-              "Web application which serves as the landing page for new customers and the portal for manage account related activities (e.g., purchasing additional credits, closing accounts, etc).",
+              "Web application which serves as the landing page for new customers and the portal for managing account related activities (e.g., purchasing additional credits, closing accounts, etc).",
             descriptionTechnical: "",
             url: "https://4ccessible.com",
             relatedLinks: [],
