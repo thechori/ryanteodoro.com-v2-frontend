@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
         type: "Founder",
         description:
           "Lead and manage projects to make the internet accessible for the blind and visually impaired.",
-        startDate: new Date(2024, 3),
+        startDate: new Date(2023, 5),
 
         endDate: null,
         achievements: [
@@ -165,6 +165,7 @@ export const experiences: Experience[] = [
       }
     ]
   },
+  /*
   {
     company: "Teodoro Systems",
     url: "https://teodorosystems.com",
@@ -348,6 +349,7 @@ Stood up WordPress website alongside React SPA for marketing and SEO purposes --
       }
     ]
   },
+*/
   {
     company: "Shell",
     url: "https://shell.com",

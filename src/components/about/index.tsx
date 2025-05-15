@@ -26,17 +26,6 @@ const About = () => (
     </p>
 
     <p className="mb-3">
-      I also run{" "}
-      <a href="https://teodorosystems.com" target="_blank">
-        Teodoro Systems
-      </a>
-      {", "}a technology consulting firm that develops solutions for clients
-      including Fortune 500 companies, YC-backed startups, digital agencies,
-      non-profits, and many more. We also support a number of internal ventures
-      such as 4ccessible.
-    </p>
-
-    <p className="mb-3">
       In my spare time, you'll find me in coffee shops hacking on{" "}
       <a href="#projects">my side projects</a> (and telling the poor baristas
       about how I created{" "}
