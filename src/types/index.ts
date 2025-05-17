@@ -29,6 +29,7 @@ export type TechnicalElement =
   | "Library"
   | "Framework"
   | "Tool"
+  | "Script"
   | "Bot"
   | "Game";
 

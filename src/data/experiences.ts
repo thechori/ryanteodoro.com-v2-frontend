@@ -69,6 +69,45 @@ export const experiences: Experience[] = [
             ]
           },
           {
+            name: "Voice Synthesis Pipeline",
+            role: "Architect & Engineer",
+            description:
+              "An end-to-end system that transcribes long-form audio, summarizes it using NLP, and generates narrated recaps with a custom-trained ElevenLabs voice. Designed to help blind and visually impaired users consume audio content more efficiently.",
+            descriptionTechnical:
+              "Engineered a pipeline using Python and the open-source Vosk model for automatic speech recognition (ASR), OpenAI's GPT for summarization, and ElevenLabs for voice synthesis. Orchestrated audio processing workflows with real-time feedback and accessible output.",
+            url: "",
+            relatedLinks: [],
+            deprecated: false,
+            proprietary: true,
+            tags: [
+              "Python",
+              "Vosk",
+              "OpenAI",
+              "ElevenLabs",
+              "ASR",
+              "NLP",
+              "Voice Cloning",
+              "Accessibility",
+              "Audio Processing"
+            ],
+            accomplishments: [],
+            technicalElements: ["Backend"],
+            languages: ["Python"],
+            frameworks: [],
+            databases: [],
+            libraries: [],
+            providers: [
+              {
+                name: "OpenAI",
+                services: ["Text Summarization"]
+              },
+              {
+                name: "ElevenLabs",
+                services: ["Voice Cloning"]
+              }
+            ]
+          },
+          {
             name: "Marketing Website",
             role: "Tech Lead",
             description:
