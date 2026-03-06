@@ -5,37 +5,41 @@ import { Badge } from "../../components/badge";
 import { projects } from "../../data/projects";
 
 const Projects = () => (
-  <section id="projects" className="mb-10 sm:mb-12 md:mb-20">
-    <h2>projects</h2>
+  <section id="projects" className="section-shell">
+    <h2 className="section-title">projects</h2>
 
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       {projects.map((project, index) => (
-        <div key={index} className="mb-6">
-          <div className="flex items-center">
-            <div className="font-bold text-2xl pr-2">{project.title}</div>
+        <article key={index} className="project-node">
+          <div className="mb-1 flex items-center gap-2">
+            <h3 className="text-2xl font-bold leading-tight">{project.title}</h3>
             {project.url && (
               <a
-                className="relative bottom-0.5"
+                className="icon-link h-8 w-8"
                 href={project.url}
                 target="_blank"
+                rel="noreferrer"
+                aria-label={`${project.title} link`}
               >
-                <ExternalLink />
+                <ExternalLink size={16} />
               </a>
             )}
           </div>
-          <div className="italic opacity-70 pb-1">
+
+          <div className="mono mb-2 text-xs uppercase tracking-[0.14em] text-[var(--text-muted)] sm:text-sm">
             {format(project.date, "MMMM yyyy")}
           </div>
 
-          <div>{project.description}</div>
-          <div className="flex flex-wrap gap-2 my-2">
-            {project.tags?.map((skill, index) => (
-              <Badge variant="outlineSecondary" key={index}>
+          <p className="section-copy">{project.description}</p>
+
+          <div className="my-3 flex flex-wrap gap-2">
+            {project.tags?.map((skill, skillIndex) => (
+              <Badge variant="outlineSecondary" key={skillIndex}>
                 {skill}
               </Badge>
             ))}
           </div>
-        </div>
+        </article>
       ))}
     </div>
   </section>

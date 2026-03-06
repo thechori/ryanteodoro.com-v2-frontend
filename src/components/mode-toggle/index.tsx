@@ -12,7 +12,6 @@ export default function ModeToggle() {
     setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
-  // init logic
   useEffect(() => {
     const foundTheme = localStorage.getItem(THEME_KEY);
     if (foundTheme) {
@@ -20,7 +19,6 @@ export default function ModeToggle() {
     }
   }, []);
 
-  // change logic
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -31,12 +29,8 @@ export default function ModeToggle() {
   }, [theme]);
 
   return (
-    <button
-      onClick={toggleTheme}
-      className="fixed top-4 right-4 p-2 border-2 rounded-lg bg-gray-200 text-yellow-500 dark:text-purple-300 dark:bg-gray-700 hover:opacity-50 transition-all hover:cursor-pointer"
-      aria-label="Toggle theme"
-    >
-      {theme === "light" ? <Sun /> : <Moon />}
+    <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
+      {theme === "light" ? <Moon size={18} /> : <Sun size={18} />}
     </button>
   );
 }

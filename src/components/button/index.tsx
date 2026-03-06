@@ -1,22 +1,19 @@
 import React from "react";
 
 const variantStyles = {
-  primary:
-    "bg-blue-600 dark:bg-orange-300 hover:bg-blue-700 text-white dark:text-black focus:ring-blue-500",
-  secondary: "bg-gray-600 hover:bg-gray-700 text-white focus:ring-gray-500",
-  success: "bg-green-600 hover:bg-green-700 text-white focus:ring-green-500",
-  danger: "bg-red-600 hover:bg-red-700 text-white focus:ring-red-500",
-  outline:
-    "border-2 border-blue-600 dark:border-orange-300 text-blue-600 dark:text-orange-300 hover:bg-blue-50 dark:hover:bg-transparent focus:ring-blue-500"
+  primary: "resume-button",
+  secondary: "resume-button",
+  success: "resume-button",
+  danger: "resume-button",
+  outline: "resume-button"
 };
 
 const sizeStyles = {
-  small: "px-3 py-1.5 text-sm",
-  medium: "px-4 py-2 text-base",
-  large: "px-6 py-3 text-lg"
+  small: "px-3 py-1.5 text-xs",
+  medium: "px-4 py-2 text-sm",
+  large: "px-6 py-3 text-base"
 };
 
-// Create types using keyof
 type VariantType = keyof typeof variantStyles;
 type SizeType = keyof typeof sizeStyles;
 
@@ -39,29 +36,13 @@ const Button: React.FC<ButtonProps> = ({
   type = "button",
   className = ""
 }) => {
-  // base styles that all buttons share
   const baseStyles =
-    "font-medium rounded-lg transition-colors duration-200 focus:ring-2 focus:ring-offset-2 hover:opacity-50 hover:cursor-pointer transition-all";
+    "mono rounded-xl font-semibold uppercase tracking-[0.11em] transition-all duration-200 hover:cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--accent)] disabled:cursor-not-allowed disabled:opacity-50";
 
-  // disabled state
-  const disabledStyles = "opacity-50 cursor-not-allowed";
-
-  // combine all the styles
-  const buttonStyles = `
-    ${baseStyles}
-    ${sizeStyles[size]}
-    ${variantStyles[variant]}
-    ${disabled ? disabledStyles : ""}
-    ${className}
-  `.trim();
+  const buttonStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`.trim();
 
   return (
-    <button
-      type={type}
-      className={buttonStyles}
-      onClick={onClick}
-      disabled={disabled}
-    >
+    <button type={type} className={buttonStyles} onClick={onClick} disabled={disabled}>
       {title}
     </button>
   );

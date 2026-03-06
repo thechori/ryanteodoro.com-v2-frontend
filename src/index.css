@@ -1,17 +1,289 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-100 text-lg;
+:root {
+  --mx: 50%;
+  --my: 50%;
+  --scroll: 0;
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --tilt-x-soft: 0deg;
+  --tilt-y-soft: 0deg;
+  --bg: #f4f8ff;
+  --bg-elev: #ffffff;
+  --bg-soft: #eaf2ff;
+  --text-main: #0f172a;
+  --text-muted: #3a4a63;
+  --line: #cad8ef;
+  --line-soft: #dce6f6;
+  --accent: #2563eb;
+  --accent-2: #0ea5e9;
+  --chip: #e8f0ff;
+  --glow: rgba(37, 99, 235, 0.18);
+}
+
+.dark {
+  --bg: #050c1a;
+  --bg-elev: #0b1425;
+  --bg-soft: #111f36;
+  --text-main: #e6edf8;
+  --text-muted: #93a8c7;
+  --line: #243859;
+  --line-soft: #1a2c49;
+  --accent: #60a5fa;
+  --accent-2: #38bdf8;
+  --chip: #132443;
+  --glow: rgba(96, 165, 250, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--text-main);
+  font-family: "Manrope", sans-serif;
+  line-height: 1.65;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 32%, transparent);
+  text-underline-offset: 0.2em;
+  font-weight: 600;
+  transition: opacity 140ms ease;
+}
+
+a:hover {
+  opacity: 0.68;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 24%, transparent);
+}
+
+@layer components {
+  .page-shell {
+    @apply relative mx-auto w-full max-w-[1260px] px-4 pb-10 pt-5 sm:px-6 sm:pt-8 lg:px-8 lg:pt-10;
   }
 
-  h2 {
-    @apply text-4xl text-slate-500 dark:text-slate-400 font-bold mb-3 pb-1 border-b-2 border-slate-300;
+  .ww-shell {
+    isolation: isolate;
   }
 
-  a {
-    @apply text-blue-700 dark:text-orange-300 font-semibold hover:opacity-50 transition-all;
+  .cursor-glow {
+    @apply pointer-events-none fixed inset-0 -z-10;
+    background: radial-gradient(280px circle at var(--mx) var(--my), var(--glow), transparent 72%);
+  }
+
+  .tech-plane {
+    @apply pointer-events-none fixed inset-0 -z-20;
+    background:
+      linear-gradient(var(--line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line-soft) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08), transparent 75%);
+    opacity: 0.45;
+    transform: translateY(calc(var(--scroll) * 22px));
+  }
+
+  .hero-grid {
+    @apply mb-5 grid gap-5 lg:grid-cols-[360px_minmax(0,1fr)];
+  }
+
+  .stack-grid {
+    @apply grid gap-5 lg:grid-cols-[1.2fr_0.9fr];
+  }
+
+  .rail-main,
+  .rail-side {
+    @apply flex min-w-0 flex-col gap-5;
+  }
+
+  .glass-card {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--bg-elev);
+  }
+
+  .sticky-hero {
+    @apply glass-card p-6 sm:p-7 lg:sticky lg:top-5;
+    transform:
+      perspective(1200px)
+      rotateX(var(--tilt-x-soft))
+      rotateY(var(--tilt-y-soft));
+    transition: transform 180ms ease;
+  }
+
+  .portrait-shot {
+    @apply mb-5 h-[140px] w-[140px] rounded-2xl object-cover;
+    border: 1px solid var(--line);
+  }
+
+  .identity-name {
+    @apply mb-1 text-4xl font-extrabold leading-[0.95] sm:text-5xl;
+    letter-spacing: -0.02em;
+  }
+
+  .identity-role {
+    @apply mb-1 text-lg font-semibold;
+  }
+
+  .section-shell {
+    @apply glass-card p-6 sm:p-7;
+    animation: riseIn 420ms ease both;
+  }
+
+  .section-title {
+    @apply mb-4 pb-3 text-2xl font-bold sm:text-3xl;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: -0.01em;
+  }
+
+  .section-copy {
+    color: var(--text-muted);
+    font-size: 1.02rem;
+  }
+
+  .meta-label {
+    @apply inline-flex items-center rounded-md px-2.5 py-1 text-[11px] uppercase;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    border: 1px solid var(--line);
+    background: var(--chip);
+  }
+
+  .timeline-stack {
+    @apply flex flex-col gap-6;
+  }
+
+  .company-block {
+    @apply rounded-xl border p-4;
+    border-color: var(--line-soft);
+    background: var(--bg-elev);
+  }
+
+  .role-block {
+    @apply mt-3 rounded-lg border p-4;
+    border-color: var(--line-soft);
+    background: transparent;
+  }
+
+  .project-node {
+    @apply relative rounded-lg border p-4;
+    border-color: var(--line-soft);
+    background: var(--bg-soft);
+    transition: transform 150ms ease, border-color 150ms ease;
+  }
+
+  .project-node:hover {
+    transform: translateY(-1px);
+    border-color: color-mix(in srgb, var(--accent) 28%, var(--line));
+  }
+
+  .project-node::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    border-radius: 2px;
+    background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--accent) 60%, transparent),
+      color-mix(in srgb, var(--accent-2) 50%, transparent)
+    );
+  }
+
+  .mono {
+    font-family: "IBM Plex Mono", monospace;
+  }
+
+  .icon-link {
+    @apply flex h-10 w-10 items-center justify-center rounded-lg;
+    border: 1px solid var(--line);
+    background: var(--bg-soft);
+    transition: transform 120ms ease, background-color 120ms ease;
+  }
+
+  .icon-link:hover {
+    transform: translateY(-1px);
+    background: color-mix(in srgb, var(--accent) 12%, var(--chip));
+  }
+
+  .theme-toggle {
+    @apply fixed right-4 top-4 z-50 flex h-11 w-11 items-center justify-center rounded-lg;
+    border: 1px solid var(--line);
+    background: var(--bg-elev);
+    color: var(--text-main);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  .resume-button {
+    @apply rounded-lg px-4 py-2 text-xs uppercase;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    color: #ffffff;
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--accent) 92%, #000 8%),
+      color-mix(in srgb, var(--accent-2) 88%, #000 12%)
+    );
+    border: 1px solid color-mix(in srgb, var(--accent) 60%, transparent);
+    transition: opacity 120ms ease;
+  }
+
+  .resume-button:hover {
+    opacity: 0.86;
+  }
+
+  .footer-note {
+    @apply text-sm;
+    color: var(--text-muted);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 14px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 1023px) {
+  .sticky-hero,
+  .tech-plane {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

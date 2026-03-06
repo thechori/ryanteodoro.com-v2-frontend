@@ -5,21 +5,21 @@ import { cva } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
 const badgeVariants = cva(
-  "inline-flex items-center rounded-md px-2.5 py-0.5 whitespace-nowrap text-white border border-transparent",
+  "mono inline-flex items-center rounded-full border px-2.5 py-1 text-xs font-medium tracking-[0.05em]",
   {
     variants: {
       variant: {
-        default: "bg-teal-600",
-        secondary: "bg-orange-400",
-        tertiary: "bg-green-400",
-        destructive: "bg-red-500 text-white ",
-        outline: "border-blue-500 text-blue-500",
-        outlineSecondary: "border-teal-600 text-teal-600"
+        default: "bg-[var(--accent)] text-white border-transparent",
+        secondary: "bg-[var(--accent-soft)] text-[var(--text-main)] border-[var(--line)]",
+        tertiary: "bg-[var(--chip)] text-[var(--text-main)] border-[var(--line)]",
+        destructive: "bg-red-500 text-white border-transparent",
+        outline: "bg-transparent text-[var(--accent)] border-[var(--accent)]",
+        outlineSecondary: "bg-[var(--chip)] text-[var(--text-main)] border-[var(--line)]"
       },
       size: {
-        sm: "px-2 py-0.5 text-xs",
-        md: "px-2.5 py-0.5 text-sm",
-        lg: "px-3 py-1 text-base"
+        sm: "px-2 py-0.5 text-[11px]",
+        md: "px-2.5 py-1 text-xs",
+        lg: "px-3 py-1.5 text-sm"
       }
     },
     defaultVariants: {

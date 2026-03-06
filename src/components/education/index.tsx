@@ -1,18 +1,16 @@
 import { Badge } from "../../components/badge";
 
 const Education = () => (
-  <section id="education" className="mb-10 sm:mb-12 md:mb-20">
-    <h2>education</h2>
+  <section id="education" className="section-shell">
+    <h2 className="section-title">education</h2>
 
-    <div className="mb-4">
-      <div className="">
-        <div className="font-bold text-2xl pr-1">
-          University of Houston - Victoria
-        </div>
-        <div className="opacity-70 italic pb-1">May 2013</div>
+    <div className="project-node">
+      <h3 className="text-2xl font-bold">University of Houston - Victoria</h3>
+      <div className="mono mb-2 mt-1 text-xs uppercase tracking-[0.14em] text-[var(--text-muted)] sm:text-sm">
+        May 2013
       </div>
-      <div>Bachelor of Science in Computer Science</div>
-      <div className="flex flex-wrap gap-2 my-2">
+      <p className="section-copy">Bachelor of Science in Computer Science</p>
+      <div className="my-3 flex flex-wrap gap-2">
         {["Graduated Cum Laude (3.52 GPA)", "Dean's List recipient"].map(
           (element, index) => (
             <Badge key={index} variant="outlineSecondary">

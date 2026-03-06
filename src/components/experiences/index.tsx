@@ -1,79 +1,59 @@
-// import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { format } from "date-fns";
-import _ from "lodash";
 //
-// import Button from "../../components/button";
 import { Badge } from "../../components/badge";
 import { experiences } from "../../data/experiences";
 
-// const MAX_EXPERIENCES_TO_SHOW = 5;
-
 const Experiences = () => {
-  // const [showAllExperiences, setShowAllExperiences] = useState(false);
-
   return (
-    <section id="experience" className="mb-10 sm:mb-12 md:mb-20">
-      <h2>experience</h2>
+    <section id="experience" className="section-shell">
+      <h2 className="section-title">experience</h2>
 
-      {/* companies */}
-      {experiences
-        // .filter((_, index) =>
-        // showAllExperiences ? true : index < MAX_EXPERIENCES_TO_SHOW
-        // )
-        .map((experience, index) => (
-          <div key={index} className="mb-10">
-            <div className="inline-block items-center">
-              <span className="font-bold text-2xl mr-2">
-                {experience.company}
-              </span>
-
+      <div className="timeline-stack">
+        {experiences.map((experience, experienceIndex) => (
+          <article key={experienceIndex} className="company-block">
+            <div className="mb-2 flex flex-wrap items-center gap-2">
+              <h3 className="text-2xl font-bold sm:text-3xl">{experience.company}</h3>
               {experience.url && (
                 <a
-                  className="inline-block relative top-1"
+                  className="icon-link h-8 w-8"
                   href={experience.url}
                   target="_blank"
+                  rel="noreferrer"
+                  aria-label={`${experience.company} website`}
                 >
-                  <ExternalLink size={24} />
+                  <ExternalLink size={16} />
                 </a>
               )}
             </div>
 
-            {/* roles within experience */}
-            {experience.roles.map((role, index) => (
-              <div key={index}>
-                <div className="flex pb-1">
-                  <div className="opacity-70 italic md:text-base">
-                    {role.title}, {format(role.startDate, "MM/yyyy")} -{" "}
-                    {role.endDate ? format(role.endDate, "MM/yyyy") : "Present"}
-                  </div>
+            {experience.roles.map((role, roleIndex) => (
+              <div key={roleIndex} className="role-block">
+                <div className="mono mb-2 text-xs uppercase tracking-[0.12em] text-[var(--text-muted)] sm:text-sm">
+                  {role.title}, {format(role.startDate, "MM/yyyy")} -{" "}
+                  {role.endDate ? format(role.endDate, "MM/yyyy") : "Present"}
                 </div>
-                <div>{role.description}</div>
+                <p className="section-copy">{role.description}</p>
 
-                {/* projects within role */}
-                <div className="flex flex-col mt-3 pl-0 gap-10">
-                  {role.projects.map((project, index) => (
-                    <div
-                      key={index}
-                      className="border-l-[12px] border-teal-500 pl-3 py-0"
-                    >
-                      <div className="flex items-center">
-                        <div>
-                          <div className="font-semibold pr-2 leading-none">
-                            {project.name}
-                          </div>
+                <div className="mt-4 flex flex-col gap-3">
+                  {role.projects.map((project, projectIndex) => (
+                    <div key={projectIndex} className="project-node">
+                      <div className="mb-1 flex items-center gap-2">
+                        <div className="text-lg font-semibold leading-tight">
+                          {project.name}
                         </div>
                         {project.url && (
-                          <a href={project.url} target="_blank">
-                            <ExternalLink size={18} />
+                          <a href={project.url} target="_blank" rel="noreferrer" aria-label={`${project.name} link`}>
+                            <ExternalLink size={15} />
                           </a>
                         )}
                       </div>
-                      <div>{project.description}</div>
 
-                      <div className="flex flex-wrap gap-2 mt-2">
-                        {project.tags.map((element, index) => (
-                          <Badge variant="outlineSecondary" key={index}>
+                      <p className="section-copy">{project.description}</p>
+
+                      <div className="mt-3 flex flex-wrap gap-2">
+                        {project.tags.map((element, tagIndex) => (
+                          <Badge variant="outlineSecondary" key={tagIndex}>
                             {element}
                           </Badge>
                         ))}
@@ -83,16 +63,9 @@ const Experiences = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </article>
         ))}
-
-      {/* {!showAllExperiences && (
-        <Button
-          title="see all experiences"
-          className="my-2"
-          onClick={() => setShowAllExperiences(true)}
-        />
-      )} */}
+      </div>
     </section>
   );
 };

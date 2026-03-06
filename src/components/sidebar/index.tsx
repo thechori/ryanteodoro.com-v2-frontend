@@ -7,17 +7,17 @@ const items = [
   {
     name: "email",
     url: "mailto:ryan.h.teodoro@gmail.com",
-    icon: <Mail />
+    icon: <Mail size={18} />
   },
   {
     name: "linkedin",
     url: "https://www.linkedin.com/in/ryanteodoro",
-    icon: <Linkedin />
+    icon: <Linkedin size={18} />
   },
   {
     name: "github",
     url: "https://github.com/thechori",
-    icon: <Github />
+    icon: <Github size={18} />
   }
 ];
 
@@ -27,63 +27,47 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-full sm:w-[325px] md:w-[350px] lg:w-[400px]">
-      <div>
+    <aside className="sticky-hero">
+      <div className="relative z-10">
+        <div className="meta-label mono mb-4">Software Engineer Portfolio</div>
+
         <img
-          width="200px"
+          width="200"
           src="/images/headshot.png"
           alt="headshot of ryan teodoro with blue background"
-          className="w:[50px] rounded-full py-4"
+          className="portrait-shot"
         />
-        <h1 className="text-5xl lg:text-6xl bg-font mb-2 font-bold">
-          ryan teodoro
-        </h1>
-        <div className="text-xl">founder, senior software engineer</div>
-        <div className="text-slate-500 dark:text-slate-400">
+
+        <h1 className="identity-name">ryan teodoro</h1>
+
+        <div className="identity-role">founder, senior software engineer</div>
+        <div className="section-copy mb-6">
           lover of cool tech, fast cars, and hot espresso
         </div>
-        {/* <div className="shadow-xl text-red-500">have a job listing? upload it to get a custom resume</div> */}
-      </div>
 
-      <div className="flex flex-row gap-4">
-        <Button title="view resume" className="my-4" onClick={viewResume} />
-        <ul className="flex gap-5 py-4">
-          {items.map((i, index) => (
-            <li
-              key={index}
-              className="flex items-center hover:opacity-50 transition-all"
-            >
-              <a href={i.url} target="_blank">
-                {i.icon}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <div className="flex flex-wrap items-center gap-3">
+          <Button title="view resume" onClick={viewResume} />
 
-      {/* <ul className="py-4">
-        <li>
-          <a href="#about" className="hover:opacity-50 transition-all">
-            <span>-</span>
-            <span>about</span>
-          </a>
-        </li>
-        <li>
-          <a href="#experience" className="hover:opacity-50 transition-all">
-            <span>-</span>
-            <span>experience</span>
-          </a>
-        </li>
-        <li>
-          <a href="#projects" className="hover:opacity-50 transition-all">
-            <span>-</span>
-            <span>projects</span>
-          </a>
-        </li>
-      </ul> */}
+          <ul className="flex gap-2">
+            {items.map((item) => (
+              <li key={item.name}>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="icon-link"
+                  aria-label={item.name}
+                >
+                  {item.icon}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
 
       <ModeToggle />
-    </div>
+    </aside>
   );
 };
 
