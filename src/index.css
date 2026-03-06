@@ -178,12 +178,6 @@ a:hover {
     background: var(--bg-elev);
   }
 
-  .role-block {
-    @apply mt-3 rounded-lg border p-4;
-    border-color: var(--line-soft);
-    background: transparent;
-  }
-
   .project-node {
     @apply relative rounded-lg border p-4;
     border-color: var(--line-soft);

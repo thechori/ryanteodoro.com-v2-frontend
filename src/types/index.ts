@@ -3,10 +3,6 @@ export interface Experience {
   url: string | null;
   location: string;
   industries: Industry[];
-  roles: Role[];
-}
-
-export interface Role {
   title: string;
   type: "Full time" | "Part time" | "Contract" | "Internship" | "Founder";
   startDate: Date;
