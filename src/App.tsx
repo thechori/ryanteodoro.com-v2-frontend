@@ -6,6 +6,7 @@ import About from "./components/about";
 import Experiences from "./components/experiences";
 import Projects from "./components/projects";
 import Education from "./components/education";
+import ParticleNetwork from "./components/particle-network";
 
 function App() {
   useEffect(() => {
@@ -43,8 +44,8 @@ function App() {
 
   return (
     <main className="page-shell ww-shell">
+      <ParticleNetwork />
       <div className="cursor-glow" aria-hidden="true" />
-      <div className="tech-plane" aria-hidden="true" />
 
       <section className="hero-grid">
         <Sidebar />
