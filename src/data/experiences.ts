@@ -2,6 +2,59 @@ import { Experience } from "../types";
 
 export const experiences: Experience[] = [
   {
+    company: "Arbol",
+    url: "https://arbol.io",
+    location: "New York, New York",
+    industries: ["Fintech", "Technology"],
+    title: "Senior Software Engineer",
+    type: "Full time",
+    description:
+      "Develop and maintain full-stack products for climate-risk and parametric insurance workflows, including data ingestion, risk evaluation, and policy management capabilities.",
+    startDate: new Date(2025, 6),
+    endDate: null,
+    achievements: [],
+    projects: [
+      {
+        name: "Automated ETL Pipeline",
+        role: "Engineer",
+        description:
+          "Built an automated ETL pipeline to ingest third-party API data, reducing manual processing and enabling near real-time policy data synchronization.",
+        descriptionTechnical: "",
+        url: null,
+        relatedLinks: [],
+        deprecated: false,
+        proprietary: true,
+        tags: ["Python", "ETL", "API Integration", "Prefect", "AWS ECS", "AWS ECR"],
+        accomplishments: [],
+        technicalElements: ["Backend"],
+        languages: ["Python"],
+        frameworks: [],
+        databases: [],
+        libraries: [],
+        providers: [{ name: "AWS", services: ["ECR", "ECS"] }]
+      },
+      {
+        name: "Parametric Insurance Platform",
+        role: "Engineer",
+        description:
+          "Developed and maintained a full-stack web platform for climate-peril parametric insurance products, supporting risk assessment and policy management workflows.",
+        descriptionTechnical: "",
+        url: null,
+        relatedLinks: [],
+        deprecated: false,
+        proprietary: true,
+        tags: ["React", "TypeScript", "Node.js", "GraphQL", "Insurance", "Climate Tech"],
+        accomplishments: [],
+        technicalElements: ["Frontend", "Backend"],
+        languages: ["TypeScript"],
+        frameworks: [],
+        databases: [],
+        libraries: ["React"],
+        providers: []
+      }
+    ]
+  },
+  {
     company: "4ccessible",
     url: "https://4ccessible.com",
     location: "Houston, TX",
@@ -11,7 +64,7 @@ export const experiences: Experience[] = [
     description:
       "Lead and manage projects to make the internet accessible for the blind and visually impaired.",
     startDate: new Date(2023, 5),
-    endDate: null,
+    endDate: new Date(2025, 6),
     achievements: [
       "SXSW Innovation Award Finalist (2025)",
       "Google Tokyo Startups member",

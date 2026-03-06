@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 //
 import Sidebar from "./components/sidebar";
-import Footer from "./components/footer";
 import About from "./components/about";
 import Experiences from "./components/experiences";
 import Projects from "./components/projects";
@@ -60,7 +59,6 @@ function App() {
         <div className="rail-side">
           <Projects />
           <Education />
-          <Footer />
         </div>
       </section>
     </main>

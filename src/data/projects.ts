@@ -2,15 +2,6 @@ import { PersonalProject } from "../types";
 
 export const projects: PersonalProject[] = [
   {
-    title: "Portfolio Website",
-    description:
-      "React app for showcasing skills, experience, and projects. Created new data structures to improve organizing technical details about experiences because existing solutions (e.g., https://jsonresume.org/schema) did not satisfy personal needs.",
-    url: "https://ryanteodoro.com",
-    date: new Date(2025, 1),
-    tags: ["TypeScript", "React", "TailwindCSS", "Netlify"],
-    additionalTags: ["CSS", "HTML"]
-  },
-  {
     title: "Fern (YC W23)",
     description:
       "Contributed to the open source library for Fern, a platform for using OpenAPI specifications to generate SDKs and docs.",
