@@ -17,14 +17,18 @@ const About = () => (
     </p>
 
     <p className="section-copy mb-4">
-      I'm currently founder and CEO at{" "}
+      I'm currently a Senior Software Engineer at{" "}
+      <a href="https://arbol.io" target="_blank" rel="noreferrer">
+        Arbol
+      </a>
+      , where I build full-stack products for climate-risk and parametric
+      insurance workflows. Before that, I founded{" "}
       <a href="https://4ccessible.com" target="_blank" rel="noreferrer">
         4ccessible
-      </a>{" "}
-      where I specialize in the application of AI in the context of digital
-      accessibility. We are members of the Google and AWS startup centers in
-      Tokyo and were recently nominated as a SXSW 2025 Innovation Award finalist
-      for our impact in Community Empowerment.
+      </a>
+      , an AI accessibility startup selected for the Google and AWS startup
+      centers in Tokyo and later recognized as a SXSW 2025 Innovation Award
+      finalist for Community Empowerment.
     </p>
 
     <p className="section-copy">
